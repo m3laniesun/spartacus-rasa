@@ -1,0 +1,888 @@
+version: "2.0"
+nlu:
+- intent: aboutad
+  examples: |
+    - i want to know more about aquiline drones
+    - i want to know more about AD
+    - tell me more about aquiline drones
+    - tell me more about AD
+    - what is AD
+    - who is aquiline drones
+    - what is aquiline drones
+    - who is AD
+    - what's AD
+- intent: services
+  examples: |
+    - tell me about services
+    - what services do you offer
+    - what services does AD offer
+    - what services does aquiline drones offer
+    - list services
+    - services
+- intent: greet
+  examples: |
+    - Bom dia
+    - Bonjour
+    - Good Morning
+    - Good morning
+    - Good mourning
+    - Guten Morgen
+    - HELLO
+    - HEY
+    - HEllo
+    - HI
+    - HI spartacus
+    - Hallo
+    - Hei
+    - Hellllooooooo
+    - Hello
+    - Hello Bot
+    - Hello Rasa
+    - Hello spartacus
+    - Hello!
+    - Hey
+    - Hey spartacus
+    - Hey bot
+    - Heya
+    - Heylo
+    - Hi
+    - Hi spartacus
+    - Hi spartacus!
+    - Hi bot
+    - Hi man
+    - Hi rasa
+    - Hi spartacus..
+    - Hi there
+    - Hi!
+    - Hi'
+    - Hi,
+    - Hi, bot
+    - Hieee
+    - Hieeeeeeeeeeeee
+    - Hola
+    - I said, helllllloooooO!!!!
+    - Well hello there ;)
+    - What is up?
+    - Whats up
+    - Whats up my bot
+    - Whats up?
+    - ayyyy whaddup
+    - bonjour
+    - ey boss
+    - good evening
+    - good moring
+    - good morning
+    - greet
+    - greetings
+    - hai
+    - hallo
+    - hallo spartacus
+    - halloo
+    - halloooo
+    - halo
+    - halo spartacus
+    - heeey
+    - heelio
+    - hell9o
+    - hellio
+    - hello
+    - hello spartacus
+    - hello everybody
+    - hello friend
+    - hello hi
+    - hello is anybody there
+    - hello it is me again
+    - hello robot
+    - hello sweatheart
+    - hello sweet boy
+    - hello there
+    - hello world
+    - hello, my name is [Charles Pfeffer](name)
+    - hello?
+    - hello
+    - hellooo
+    - helloooo
+    - helo
+    - hey
+    - hey bot
+    - hey bot!
+    - hey dude
+    - hey hey
+    - hey let's talk
+    - hey rasa
+    - hey spartacus
+    - hey ther
+    - hey there
+    - hey there boy
+    - hey there..
+    - hey, let's talk
+    - hey, spartacus!
+    - heya
+    - heyho
+    - heyo
+    - hhola
+    - hi
+    - hi !
+    - hi Mister
+    - hi again
+    - hi can you speak ?
+    - hi folks
+    - hi friend
+    - hi friends
+    - hi hi
+    - hi i'm [Sandra Hernandez](name)
+    - hi im [Amanda Anderson](name)
+    - hi mrs rasa
+    - hi pal!
+    - hi spartacus
+    - hi there
+    - hi there it's me
+    - hi!
+    - hi.........................................................
+    - hi?
+    - hieee
+    - hii
+    - hiihihi
+    - hiii
+    - hlo
+    - hola
+    - howdy
+    - i am [Karen Mease](name)
+    - jojojo
+    - jop
+    - konichiwa
+    - merhaba
+    - ola spartacus
+    - rasa hello
+    - salut
+    - sup
+    - wasssup
+    - wasssup!
+    - what up
+    - whats popping
+    - whats up
+    - yo
+    - yoo
+    - ssup?
+    - helleo
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - see you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+- intent: affirm
+  examples: |
+    - Accept
+    - Awesome!
+    - Good
+    - Great
+    - I accept
+    - I accept.
+    - I agree
+    - I am using it
+    - I changed my mind. I want to accept it
+    - I do
+    - I get it
+    - I guess so
+    - I have used it in the past
+    - I will
+    - I'd absolutely love that
+    - I'm sure I will!
+    - I'm using it
+    - Nice
+    - OK
+    - Ofcourse
+    - Oh yes
+    - Oh, ok
+    - Ok
+    - Ok let's start
+    - Ok.
+    - Okay
+    - Okay!
+    - PLEASE
+    - SURE
+    - Sure
+    - Sweet
+    - That would be great
+    - YES
+    - YUP
+    - Yea
+    - Yeah
+    - Yeah sure
+    - Yep
+    - Yep that's fine
+    - Yep!
+    - Yepp
+    - Yes
+    - Yes I do
+    - Yes please
+    - Yes please!
+    - Yes, I accept
+    - Yes.
+    - Yup
+    - a little
+    - absolutely
+    - accept
+    - accepted
+    - agreed
+    - ah ok
+    - alright
+    - alright, cool
+    - amayzing
+    - amazing!
+    - awesome
+    - awesome!
+    - confirm
+    - cool story bro
+    - definitely yes without a doubt
+    - done
+    - fair enough
+    - fcourse
+    - fine
+    - fuck yeah!
+    - go
+    - go ahead
+    - go for it
+    - going super well
+    - good.
+    - great
+    - great lets do that
+    - great!
+    - hell yeah
+    - hell yes
+    - hm, i'd like that
+    - how nice!
+    - i accept
+    - i agree
+    - i am!
+    - i want that
+    - i will!
+    - it is ok
+    - its okay
+    - ja
+    - ja cool
+    - ja thats great
+    - jezz
+    - jo
+    - k
+    - kk
+    - lets do it
+    - lets do this
+    - not bad
+    - of course
+    - ofcoure i do
+    - ofcourse
+    - oh awesome!
+    - oh cool
+    - oh good !!
+    - oh super
+    - ok
+    - ok cool
+    - ok fine
+    - ok friend
+    - ok good
+    - ok great
+    - ok i accept
+    - ok spartacus
+    - ok, I behave now
+    - ok, I understood
+    - ok, spartacus
+    - ok...
+    - okay
+    - okay cool
+    - okay sure
+    - okay..
+    - oki doki
+    - okie
+    - ook
+    - oui
+    - perfect
+    - please
+    - si
+    - sort of
+    - sure
+    - sure thing
+    - sure!
+    - that is cool
+    - that ok
+    - that sounds fine
+    - that's great
+    - thats fine
+    - thats good
+    - thats great
+    - top
+    - uh-huh
+    - very much
+    - well yes
+    - y
+    - ya
+    - ya cool
+    - ya go for it
+    - ya i want
+    - ya please
+    - ya thats cool
+    - yaah
+    - yap
+    - yaps
+    - yas
+    - yay
+    - ye
+    - ye splease
+    - yea
+    - yeah
+    - yeah do that
+    - yeah sure
+    - yeah'=
+    - yeah, why not
+    - yeeeeezzzzz
+    - yeeees
+    - yep
+    - yep i want that
+    - yep if i have to
+    - yep please
+    - yep that's nice
+    - yep thats cool
+    - yep, will do thank you
+    - yep. :/
+    - yes
+    - yes ...
+    - yes I do
+    - yes accept please
+    - yes baby
+    - yes cool
+    - yes give me information
+    - yes go ahead
+    - yes go for it
+    - yes great
+    - yes i accept
+    - yes i agree
+    - yes i have built a bot before
+    - yes i have!
+    - yes it is
+    - yes it was okay
+    - yes of course
+    - yes pleae
+    - yes please
+    - yes please!
+    - yes pls
+    - yes sirfr
+    - yes that's great
+    - yes that's what i want
+    - yes you can
+    - yes'
+    - yes, I'd love to
+    - yes, cool
+    - yes, give me information, please
+    - yes,i am
+    - yes.
+    - yesh
+    - yess
+    - yessoo
+    - yesss
+    - yesssss
+    - yesyestyes
+    - yesyesyes
+    - yez
+    - yop
+    - you asked me a yes or no question, which i answered with yes
+    - you got me, I accept, if you want me to
+    - yres
+    - ys
+    - yup
+    - yyeeeh
+    - Okay cool
+    - ok..
+    - considering
+    - More a less
+    - sounds good!
+    - really
+- intent: deny
+  examples: |
+    - no
+    - no thanks
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - i don't want
+- intent: mood_great
+  examples: |
+    - cool beans
+    - sweet
+    - Cool
+    - cool
+    - cool :)
+    - cool!
+    - coolio
+    - :)
+    - :D
+    - HAHA
+    - I am happy
+    - LOL
+    - Lol
+    - Lol thats funny
+    - Looks nice
+    - WOW
+    - Wow
+    - You are great
+    - You're cute.
+    - You're nice.
+    - You're really cool
+    - hAHAHA
+    - ha ha
+    - haha
+    - hahah
+    - hahaha
+    - happy
+    - i am feeling happy
+    - i am happy
+    - i am happy today
+    - i am very happy with your response
+    - i love you
+    - it's pretty cool
+    - lol
+    - love you
+    - okay Rasabot, you're cool
+    - rasa is awesome
+    - such a great demo
+    - that is funny
+    - that was a great interaction
+    - thats funny
+    - today was a nice day
+    - wow
+    - you are a badass bot!
+    - you are awesome
+    - you are cool
+    - you are cool man
+    - you are doin great
+    - you are funny
+    - you are great
+    - you are my new bestfriend
+    - you seem pretty cool :D
+    - I like you
+    - I love you
+    - you are realy intelligent
+    - I like Rasa
+    - hèhè
+    - like u
+    - you are so smart
+    - That's awesome.
+    - Got it
+    - you good
+    - Great information
+    - I mean to say that I liked the explanation
+    - Super! I love Rasa
+    - good one
+    - that's cool
+    - okay cool
+    - nice
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - stupid
+    - dumb
+    - idiot
+    - moron
+    - retard
+    - this is frustrating
+    - I am feeling bad
+    - I am super sad
+    - I'm sad
+    - I'm super sad
+    - Now I'm sad
+    - This is bad
+    - You are quite bad
+    - bad
+    - bad boy
+    - crappy joke
+    - documentation of rasa is very bad
+    - i am angry over you
+    - i am feel sad
+    - i am sad
+    - i am sad about that
+    - i am very sad
+    - i feel sad
+    - i sad
+    - i'm sad
+    - rasa is bad
+    - so sad
+    - so sad :(
+    - u broke my heart
+    - very very sad
+    - you are bad
+    - you are bad bot
+    - you make me sad
+    - You are mad
+    - You are rude
+    - bots are bad
+    - i don't care!!!!
+    - i dont like bots
+    - this is a really frustrating experience
+    - you're rather dull
+    - i am so worry
+    - i will leave
+    - Although I understand your still in development, I feel a little bit disappointed.
+    - Surely you're not so smart lik i thought
+    - iam not feeling good
+    - Thats so rude
+    - sadly
+    - That tool here isnt good
+    - boring
+    - that's way too expensive
+- intent: thank
+  examples: |
+    - Cool. Thanks
+    - Great, thanks
+    - Thank you
+    - Thank you spartacus
+    - Thank you so much
+    - Thank's!
+    - Thanks
+    - Thanks bot
+    - Thanks for that
+    - Thanks!
+    - amazing, thanks
+    - cheers
+    - cheers bro
+    - cool thank you
+    - cool thanks
+    - cool, thanks
+    - danke
+    - great thanks
+    - ok thanks
+    - ok thanks spartacus
+    - ok thanks!
+    - perfect thank you
+    - thank u
+    - thank you
+    - thank you anyways
+    - thanks
+    - thanks a bunch for everything
+    - thanks a lot
+    - thanks for forum link, I'll check it out
+    - thanks for the help
+    - thanks this is great news
+    - thanks you
+    - thanks!
+    - thankyou
+    - thnks
+    - thx
+    - yes thanks
+    - thanks for your information
+    - thanks f
+- intent: tell_more
+  examples: |
+    - can you tell me more about AD?
+    - do tell more
+    - what else can i know about AD?
+    - tell me more about the company
+- intent: bot_challenge
+  examples: |
+    - what's your name?
+    - who are you?
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+    - who are you
+    - who r u
+    - what r u
+    - what are u
+    - do you have a name
+- intent: list_courses
+  examples: |
+    - what classes do you offer?
+    - what courses are there?
+    - what classes are there?
+    - what courses can i take?
+    - what classes can i take?
+    - list classes
+    - list courses
+- intent: fttf_intro
+  examples: |
+    - what is flight-to-the-future?
+    - what is flight to the future?
+    - what is fttf?
+- intent: fttf_benefits
+  examples: |
+    - what are the benefits of fttf?
+    - what are the benefits of the program?
+    - what are the benefits?
+    - benefits of the program
+    - fttf benefits
+- intent: fttf_complete
+  examples: |
+    - what happens when the program is completed?
+    - what happens when fftf is completed?
+    - fttf completed
+    - what happens when the program is over?
+    - what happens when fttf is over?
+    - what happens when program is done?
+    - what happens when i'm done?
+- intent: fttf_kit
+  examples: |
+    - what do i get with flight to the future?
+    - what do i get with fttf program?
+    - what's in the success kit?
+    - what do i get with the kit?
+    - what do i get with the program?
+    - what do i get?
+- intent: lesson_one
+  examples: |
+    - start lesson one
+    - show me lesson one
+    - resume lesson one
+    - i want to do lesson one
+    - lesson one
+- intent: show_modules
+  examples: |
+    - lesson one summary
+    - lesson one modules
+    - show me the lesson plan
+    - i wanna see the lesson
+- intent: take_quiz
+  examples: |
+    - lesson one quiz
+    - can i take the quiz
+    - take lesson one quiz
+    - quiz time
+    - let's do the quiz
+- intent: cost
+  examples: |
+    - how much does it cost
+    - cost of learning
+    - how much do i have to pay
+    - how much does this cost
+    - how much does it cost to become a pilot
+    - is this expensive
+    - how much money
+    - how much am i paying
+- intent: weather_effect
+  examples: |
+    - is it okay to fly drones in this weather 
+    - how does weather affect drones
+    - how does weather affect flying
+    - should i be concerned about weather
+- intent: personality
+  examples: |
+    - How are you doing?
+    - What's up?
+    - How's it going?
+    - How are you?
+    - how u doin
+    - how are you
+    - what's good
+    - what's up spartacus
+    - how are u spartacus
+- intent: jokes
+  examples: |
+    - say something funny
+    - make me laugh
+    - tell me a joke
+    - are u 
+    - tell another joke
+    - you got jokes?
+    - i wanna hear a pun
+- intent: ask_weather 
+  examples: |
+    - what's the weather
+    - how's weather
+    - is it hot or cold outside
+    - how is the weather
+    - what's the temperature
+    - gimme the temp
+    - what's the weather like in [Fairfax](location)
+    - can you give me the forecast
+    - what's today's weather
+    - may i know the weather
+    - is it raining now
+    - what is the weather now
+- intent: time
+  examples: |
+    - Can you give me the time?
+    - Can you tell me the time?
+    - Can you tell me what time it is?
+    - Can you tell the time?
+    - Could you tell me the time, please?
+    - Could you tell me the time?
+    - Could you tell me what time is it?
+    - Do you have the time?
+    - Do you know the time?
+    - Do you know what time it is?
+    - Excuse me, what time is it?
+    - Give me the time.
+    - Hi, I need the time.
+    - I need to know what time it is.
+    - Pardon me, but do you know the time?
+    - Tell me the time.
+    - Time, please!
+    - Time?
+    - What is the current time?
+    - What is the exact time?
+    - What is the hour and minute right now?
+    - What is the time?
+    - What might the time be?
+    - What time do we have?
+    - What time have we got?
+    - What time is it in [DC](location)?
+    - What time is it right now?
+    - What's the current time?
+    - What's the time right now?
+    - What's the time?
+    - Would you tell me what time it is?
+    - do you have the time?
+    - do you know the current time?
+    - tell me the current time.
+    - tell me the time it is.
+    - tell me the time.
+    - tell me what time you have.
+    - that's true. do you know what time it is?
+    - what is the current time?
+    - what is the time ?
+    - what is the time in [Fairfax](location)?
+    - what is the time?
+    - what is time in US ?
+    - what is time is US ?
+    - what is time is USA ?
+    - what time do you have?
+    - what time is it
+    - what time is it?
+    - what time it is
+    - what's the time
+    - whats the time 
+    
+- intent: faq
+  examples: |
+    - can i ask a question
+    - show me faq
+    - faq
+    - i have questions
+    - frequently asked questions
+    - can i see FAQ
+
+- intent: aerial_bombing
+  examples: |
+    - bomb
+    - flying bomb
+    - when was the first aerial bombing
+    - first bombing
+    - aerial bombing
+    - tell me about bombing
+    - bombing
+
+- intent: aerodynamics
+  examples: |
+    - Tell me about aerodynamics
+    - what are aerodynamics
+    - physics
+    - aerodynamics
+
+- intent: airports
+  examples: |
+    - national airspace
+    - i want to know about national airspace
+    - tell me about airports
+
+- intent: can_fly
+  examples: |
+    - do i have what it takes to be a drone pilot?
+    - can i be a drone pilot?
+    - can anyone be a drone pilot?      
+  
+- intent: commercial_use
+  examples: |
+    - tell me about commercial use?
+    - commercial drones
+
+- intent: steps
+  examples: |
+    - program details
+    - how does the program work
+    - steps
+    - what the steps to becoming a pilot
+    - how many steps are there
+
+- intent: how_much
+  examples: |
+    - how much money do drone pilots make
+    - how much money does flying drones make
+    - how much money can a drone pilot make
+    - how much money can i make as a drone pilot
+
+- intent: performance
+  examples: |
+    - what is the performance like
+    - performance of drones 
+
+- intent: lesson_one_readings
+  examples: |
+    - lesson one readings
+    - Lesson One Readings
+    - let's read
+    - show me some articles
+
+
+- intent: find_jobs
+  examples: |
+    - find a job
+    - i want to get a job
+    - how do i get a job
+    - where can i find a job
+
+
+- intent: module_1_2_1
+  examples: |
+    - module 1.2.1
+    - Module 1.2.1
+- intent: module_1_2_2
+  examples: |
+    - module 1.2.2
+    - Module 1.2.2
+- intent: module_1_2_3
+  examples: |
+    - module 1.2.3
+    - Module 1.2.3
+- intent: module_1_2_4
+  examples: |
+    - module 1.2.4
+    - Module 1.2.4
+- intent: module_1_2_5
+  examples: |
+    - module 1.2.5
+    - Module 1.2.5
+- intent: module_1_2_6
+  examples: |
+    - module 1.2.6
+    - Module 1.2.6
+- intent: module_1_2_7
+  examples: |
+    - module 1.2.7
+    - Module 1.2.7
+- intent: module_1_2_8
+  examples: |
+    - module 1.2.8
+    - Module 1.2.8
+- intent: module_1_2_9
+  examples: |
+    - module 1.2.9
+    - Module 1.2.9
+

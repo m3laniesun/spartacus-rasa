@@ -1,0 +1,230 @@
+version: "2.0"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: thank
+  steps:
+  - intent: thank
+  - action: utter_welcome
+  
+- story: intro
+  steps:
+    - intent: aboutad
+    - action: utter_aboutad
+    - intent: tell_more
+    - action: utter_moread
+
+- story: ask_services
+  steps: 
+    - intent: services
+    - action: utter_services
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_sorry
+  - action: utter_help
+  - intent: affirm
+  - action: utter_okay
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_sorry
+  - action: utter_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: courses
+  steps:
+    - intent: list_courses
+    - action: utter_courses
+
+- story: what is fftf
+  steps:
+    - intent: fttf_intro
+    - action: utter_fttf_intro
+
+- story: fttf benefits
+  steps:
+    - intent: fttf_benefits
+    - action: utter_fttf_benefits
+
+- story: fttf complete
+  steps:
+    - intent: fttf_complete
+    - action: utter_fttf_complete
+
+- story: fttf kit
+  steps:
+    - intent: fttf_kit
+    - action: utter_fttf_kit
+
+- story: lesson one
+  steps:
+    - intent: lesson_one
+    - action: utter_lesson_one
+
+- story: take quiz
+  steps:
+    - intent: take_quiz
+    - action: utter_quiz
+
+- story: show modules
+  steps:
+    - intent: show_modules
+    - action: utter_modules
+
+- story: weather
+  steps:
+    - intent: weather_effect
+    - action: utter_weather_effect
+
+- story: cost
+  steps:
+    - intent: cost
+    - action: utter_cost
+
+- story: personality
+  steps:
+    - intent: personality
+    - action: utter_personality
+    - intent: mood_great
+    - action: utter_happy
+
+- story: jokes
+  steps:
+    - intent: jokes
+    - action: utter_jokes
+
+- story: tell weather
+  steps:
+    - intent: ask_weather
+    - action: action_ask_weather
+
+- story: tell time
+  steps:
+    - intent: time
+    - action: utter_time
+
+- story: bombing
+  steps:
+    - intent: aerial_bombing
+    - action: utter_bombing
+
+- story: aerodynamics
+  steps:
+    - intent: aerodynamics
+    - action: utter_aerodynamics  
+
+- story: airports
+  steps:
+    - intent: airports
+    - action: utter_airports
+
+- story: can anyone fly
+  steps:
+    - intent: can_fly
+    - action: utter_can_fly
+
+- story: commercial use
+  steps:
+    - intent: commercial_use
+    - action: utter_commercial_use
+
+- story: show steps
+  steps:
+    - intent: steps
+    - action: utter_steps
+
+- story: inform that anyone can fly
+  steps:
+    - intent: can_fly
+    - action: utter_can_fly
+
+- story: how much can i make
+  steps:
+    - intent: how_much
+    - action: utter_how_much
+
+- story: performance
+  steps:
+    - intent: performance
+    - action: utter_performance
+
+- story: lesson one readings
+  steps:
+    - intent: lesson_one_readings
+    - action: utter_lesson_one_readings
+
+- story: where to find jobs
+  steps:
+    - intent: find_jobs
+    - action: utter_find_jobs
+
+- story: module 1.2.1
+  steps:
+    - intent: module_1_2_1
+    - action: utter_module_1_2_1
+    - action: utter_modules
+
+- story: module 1.2.2
+  steps:
+    - intent: module_1_2_2
+    - action: utter_module_1_2_2
+    - action: utter_modules
+
+- story: module 1.2.3
+  steps:
+    - intent: module_1_2_3
+    - action: utter_module_1_2_3
+    - action: utter_modules
+
+- story: module 1.2.4
+  steps:
+    - intent: module_1_2_4
+    - action: utter_module_1_2_4
+    - action: utter_modules
+
+- story: module 1.2.5
+  steps:
+    - intent: module_1_2_5
+    - action: utter_module_1_2_5
+    - action: utter_modules
+
+- story: module 1.2.6
+  steps:
+    - intent: module_1_2_6
+    - action: utter_module_1_2_6
+    - action: utter_modules
+
+- story: module 1.2.7
+  steps:
+    - intent: module_1_2_7
+    - action: utter_module_1_2_7
+    - action: utter_modules
+
+- story: module 1.2.8
+  steps:
+    - intent: module_1_2_8
+    - action: utter_module_1_2_8
+    - action: utter_modules
+
+- story: module 1.2.9
+  steps:
+    - intent: module_1_2_9
+    - action: utter_module_1_2_9
+    - action: utter_modules
+
+

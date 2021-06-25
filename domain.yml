@@ -1,0 +1,431 @@
+version: '2.0'
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet
+- goodbye
+- affirm
+- deny
+- mood_great
+- mood_unhappy
+- bot_challenge
+- aboutad
+- services
+- list_courses
+- fttf_intro
+- fttf_benefits
+- fttf_complete
+- fttf_kit
+- lesson_one:
+    use_entities: true
+- show_modules:
+    use_entities: true
+- take_quiz:
+    use_entities: true
+- weather_effect
+- thank:
+    use_entities: true
+- tell_more
+- cost
+- personality
+- jokes
+- ask_weather
+- time
+- aerial_bombing
+- faq
+- aerodynamics
+- airports
+- can_fly
+- commercial_use
+- steps
+- how_much
+- performance
+- lesson_one_readings
+- find_jobs
+- module_1_2_1
+- module_1_2_2
+- module_1_2_3
+- module_1_2_4
+- module_1_2_5
+- module_1_2_6
+- module_1_2_7
+- module_1_2_8
+- module_1_2_9
+
+entities:
+- name
+slots: {} 
+responses:
+  utter_greet:
+  - image: spar_left.gif
+    text: Hello. I'm here to assist you with the Flight to the Future program.
+  utter_sorry:
+  - image: spar_negative.gif
+    text: Sorry to hear that.
+  utter_help:
+  - text: Is there anything I can do to help?
+  utter_okay:
+  - image: spar_nod.gif
+    text: Okay, what can I help you with?
+  utter_happy:
+  - image: spar_positive.gif
+    text: Great, carry on!
+  - image: spar_positive.gif
+    text: Good to hear! 
+  utter_welcome:
+  - image: spar_nod.gif
+    text: I'm happy to be of assistance!
+  - image: spar_nod.gif
+    text: I'm glad to help.
+  - image: spar_nod.gif
+    text: You're welcome.
+  utter_goodbye:
+  - image: spar_positive.gif
+    text: Goodbye! Let me know if there's anything else you need.
+  utter_iamabot:
+  - image: spar_right.gif
+    text: I am Spartacus, a modular cognitive system used by the AD Cloud to extract deep insights.
+  utter_aboutad:
+  - text: |+ 
+      Aquiline Drones is an independent, American drone solutions company comprised of highly experienced aviators, systems engineers, and IT gurus.
+      
+      With a customer-centric model, US-based manufacturing and supply chain and world-class MRO services, we offer innovative and successful ways to use drones in commercial activities.
+  utter_moread:
+  - text: |+
+      Aquiline Drones are supported by a dedicated UAV cloud, real-time OS, and autonomous drone operations with real-time control and dynamic in-field decision making capabilities.
+      
+      These technological solutions provide a more expansive and deeper applicability across countless industries and environments by delivering real-time data insights.
+
+      Aerospace-compliant processes for software, hardware manufacturing and systems integration, along with best-in-class mission capabilities are being planned and designed. 
+
+      The company continues to forge relationships with Federal, State, and private organizations in an effort to develop and launch new drone system applications in a collaborative manner.
+
+  utter_services:
+  - text: 'As a drone solutions company, we offer many different drone enterprise solutions: Life-critical delivery, Perimeter security, Law enforcement, Asset inspection, Surveying and mapping, Videography, Crop spraying, Livestock and wildlife (under development). Delivery (under development).'
+  utter_courses:
+  - text: |+
+      GRND 101: An introduction to flying drones, the physics and aerodynamics of drone flight, and what is involved in drone missions. 
+      
+      GRND 102: A look at the human factors of drone flights and the myriad of concerns drone pilots need to consider; including FAA rules and regulations, NAS, Weather, and Fars.
+      
+      Cloud 101: A look at how the Aquiline Drones cloud solution will integrate and allow your drone business to succeed by using AI and the internet of things.
+      
+      Cloud 102: This class delves deeper into cloud technologies and how our Mod approach and mission based asset management allows for your drone business to prosper.
+      
+      UAS 101: Learn about how your commerical drone solution can benefit from the R2M2 approach.
+      
+      UAS 102: Explore different market segments that are available to your commercial drone solution; videography, surveying, security, and inspection are all topics.
+      
+      UAS 103: Provides simulations of each segment to allow your commercial drone solution to evolve and become profitable.
+  utter_fttf_intro:
+  - text: Flight to the Future is a comprehensive 6-8 week program that gives pilots, including small Unmanned Aerial Vehicle pilots, as well as the general public, the tools they need to learn how to own and operate their own commercial drone LLC.
+  utter_fttf_benefits:
+  - text: |+
+      Flight to the Future (FF) is a real opportunity for you to take control of your income. 
+      
+      At the end of the six week program, you will be fully licensed, trained how to maximize the AD Cloud, own your own limited liability company (LLC), and be fully onboarded to accept jobs through the world’s first Drone on Demand app.
+      
+      AD packed tremendous value into the FF program:
+      · $5,000 of training and services for $999.
+      · Work on your schedule.
+      · No need to slowly build and nurture a customer base.
+      
+      · The very real potential to earn a six-figure income working part time.
+      · No further investment! All costs such as drone financing will be deducted as you earn.
+  
+      · No commitment. If life changes down the road you still have your own LLC and your commercial drone license. You own both! You are under no obligation to purchase AD products at the end of the program. 
+  utter_fttf_complete:
+  - text: |-
+      Once you complete all four steps, you can download the Drone on Demand App, which is modeled similarly to that of UBER or Lyft where you will be connected through the app to job opportunities in your area.
+      
+      Financing is also available at this point and will depend greatly on the sensor package that you require.
+  utter_fttf_kit:
+  - text: |+ 
+      The following is what a candidate will receive in their Flight to the Future success kit: 
+    
+        • Virtual drone ground school training, hands on drone operation training, and assistance in becoming an FAA-Certified Drone Pilot 
+    
+        • Interactive learning modules instructing candidates on how to use the AD Cloud, how to use their drone training for a specific commercial solution of their choosing, and how to run their own drone LLC 
+    
+        • Access to our Drone on Demand app 
+    
+        • A full year’s worth of insurance and a one-year subscription to our AD Cloud
+  utter_lesson_one:
+  - buttons:
+    - payload: /show_modules
+      title: Modules
+    - payload: /take_quiz
+      title: Quiz
+    text: Welcome to Lesson One!
+  utter_quiz:
+  - text: You can take the quiz [here](https://docs.google.com/forms/d/e/1FAIpQLSdfu9NzAMPS1CDTn40uSW0urkzSeMpuMHhczEk-Vo5rnzvKLg/viewform?embedded=true).
+  utter_modules:
+  - buttons:
+    - payload: /module_1_2_1
+      title: "1.2.1"
+    - payload: /module_1_2_2
+      title: "1.2.2"
+    - payload: /module_1_2_3
+      title: "1.2.3"
+    - payload: /module_1_2_4
+      title: "1.2.4"
+    - payload: /module_1_2_5
+      title: "1.2.5"
+    - payload: /module_1_2_6
+      title: "1.2.6"
+    - payload: /module_1_2_7
+      title: "1.2.7"
+    - payload: /module_1_2_8
+      title: "1.2.8"
+    - payload: /module_1_2_9
+      title: "1.2.9"
+    text: Select a section to go over.
+
+  utter_module_1_2_1:
+  - text: |+
+      Welcome to the future of aviation. This is step 1 in the Flight to the Future program.
+
+      At the completion of this step, you will become an FAA licensed commercial drone pilot.
+
+      From understanding how drones are made to the rules of operating them in the National Airspace, you’ll learn about topics
+      that will help you pass the FAA Part 107 exam for drone pilots.
+
+  utter_module_1_2_2:
+  - text: |+
+      Drone systems
+
+      What are drones? From multi-rotors to fixed-wing, drones come in many shapes and sizes. 
+      In this lesson you’ll learn how drones are made, what their vital components are, and the engineering that makes it all possible.
+
+      With emphasis on multi-rotors, you’ll get a good understanding of the vital systems and technologies employed.
+      For additional perspective, delve into the history of drones and discover how this technological marvel evolved. 
+
+  utter_module_1_2_3:
+  - text: |+
+      Drones, UAVs and UAS
+
+      Drones in general describe machines that have some level of independence and can operate without human intervention or assistance
+      for periods of time. To get a deeper understanding of drones and drone systems, we have to start by defining them. 
+      
+      Although unmanned aerial vehicles or UAVs have become synonymous with the word drones, a large variety of machines can fall under this category.
+      
+      As a future unmanned aerial services or UAS provider, you should have a good grasp of the concepts and technologies that converge in engineering
+      and operating drones.
+
+  utter_module_1_2_4:
+  - text: |+
+      Technologies transforming the industry
+
+      Then there is the autonomous capability – or at least some degree of automated operations that are a universal characteristic of all drones.
+      
+      From the perspective of a commercial drone operator, the industry is changing rapidly. Many of the core technologies are rapidly
+      evolving – enabling new, innovative solutions and business models.
+
+      This lesson will introduce you to some of those technologies, notably cloud computing and artificial intelligence.
+      With the advent of wireless connectivity, these technologies are transforming how unmanned aerial missions are planned and executed.
+      
+      You’ll learn the difference between active and passive drone missions and how sensors and payloads define capabilities. 
+      And despite the versatile nature of these capabilities, specialized industry solutions have emerged and are rapidly evolving. 
+      
+      As a future UAS provider, you need to be keenly aware of the trends and future directions.
+
+  utter_module_1_2_5:
+  - text: |+
+      Cloud connected VTOL drone with specialized sensors, LTE communications and AI based video analysis
+      Regulations and policies
+
+      Rapid expansion of this industry requires a deep integration of UAV services into the National Airspace System or NAS. 
+      The Federal Aviation Administration, or FAA, was initially slow in taking steps to do this.
+      
+      However, since 2016 they have ramped up their efforts to provide regulatory oversight on UAV operations.
+      You’ll get a good introduction to the current picture, preparing you for a deeper dive in subsequent lessons.
+
+  utter_module_1_2_6:
+  - text: |+
+      Drone systems
+      
+      A drone system will consist of an Air Segment and Ground Segment. The Air Segment includes everything that flies to perform a mission.
+      Namely the UAV and a payload. 
+      
+      The Ground Segment includes the technology that is fixed to the ground and manages the UAV from mission planning
+      to completion including post mission reporting. Drone engineering is focused on the air segment of the system.
+
+
+  utter_module_1_2_7:
+  - text: |+
+      Drone engineering and electronics
+      
+      Next, we’ll turn attention to the vehicle itself – the unmanned aerial vehicle.
+      
+      There are two basic configurations: fixed wing and VTOL (vertical takeoff and landing).
+      The focus in our curriculum, will be on VTOL versions.
+      
+      Additionally, as you’ll see later, current regulations usually don’t permit BVLOS (beyond visual line of sight) operations.
+      
+      So the main choice of propulsion becomes battery power, which is increasingly suitable for short flights.
+      Information on gas powered engines and hybrid configurations can be found in the lesson bibliography.
+      
+      The key electronic components in a VTOL are a transceiver, a flight controller and a regulator-distributor.
+      Integrated with these, are the drone motors and the battery of course. 
+      
+      As you’ll discover later, mission specifics can influence the exact nature of the technical capabilities. 
+
+      For example, a GPS card is an option that can be added for enhanced flight control if the selected flight controller can leverage
+      GPS for autonomous navigation.
+      
+      A transceiver receives and sends control data as well as payload data between the UAV and the ground segment.
+
+      So, if the UAV is only flown by a direct radio frequency (RF) hand controller, then it only needs an RF transceiver. 
+      
+      An LTE (Long-Term Evolution) or satellite transceiver is needed if the UAV is used for longer distance missions.
+
+      Take a deeper dive on these topics in the concept section of this lesson.
+
+  utter_module_1_2_8:
+  - text: |+
+      Sensors and payloads
+      
+      Sensors vary based on mission requirements and vehicle capability. Full spectrum observational sensors are available.
+      
+      Additionally, specialized equipment such as LIDAR (using lasers) is increasingly in use. Fire and radiation detection sensors 
+      are amongst some of the most advanced capabilities being developed for commercial use.
+
+      Payloads are the next evolution in commercial drone operations. 
+      Due to power constraints, UAVs are often built around specific payloads. 
+      
+      For example, medical delivery requirements may require a refrigerated payload to be maintained during transport. 
+      Nevertheless, more generalized capabilities are being devised to enable drones to perform multiple types of missions.
+  
+  utter_module_1_2_9:
+  - text: |+
+      The British Queen Bee, a radio-controlled target drone from the 1930s
+
+      Finally, a bit of history
+
+      Drones, specifically the aerial variety, have been evolving for over a century now. Their origins are in warfare and military applications.
+      
+      To understand how the age of commercial drones appeared in the past couple of decades, its essential to understand the milestones that preceded.
+
+      We’ll look at how drones first made their appearance as aerial bombs, then moved on to become radio-controlled targets 
+      for anti-aircraft defense training.
+      They eventually became jet powered and could be used for high altitude reconnaissance missions. 
+      
+      Finally, in the last decade of the Twentieth Century, their use in military expanded rapidly, laying the groundwork for commercial versions 
+      to make their way into the market.
+
+  utter_weather_effect:
+  - text: Weather prediction is now an essential component of all societal activities.
+          It is of even greater significance in aviation, where it can greatly influence performance and safety. For more information, review Step 1 of the program.
+  utter_cost:
+  - text: |-
+      The $999 Success Kit is designed for students with no prior aviation experience.
+      This kit is only $799 for those who are already sUAV certified.
+      
+      Our Flight to the Future kit has $5000 worth of training and services. 
+  utter_personality:
+  - image: spar_right.gif
+    text: I am glad to be talking to you. How can I assist you today?
+  utter_jokes:
+  - text: Why did the drone get sent to its room? Because it had a bad altitude.
+  - text: How often do drones crash? Just once.
+  - text: What happens to bad drone jokes? They go over your head.
+  - text: We're in the business of drones. It's really starting to take off.
+  - text: Piloting drones is fun! It has its ups and downs.
+  utter_time:
+  - text: The current time is displayed underneath this message.
+
+  utter_bombing:
+  - text: |+
+      On August 22, 1849, Austria launched an aerial assault on Venice when the city tried to gain independence, utilizing ballons to drop bombs.
+      The rail-launched Kettering Aerial Torpedo “Bug” was created by the Dayton-Wright Airplane Company in 1917. It was basically an unmanned aerial torpedo, guided by preset controls.
+      
+      For more drone history, revisit the "A history of drones" lesson.
+
+  utter_faq:
+  - text: Our FAQ is currently in development. If you have additional questions not covered here, please visit our complete FAQ page!
+
+
+  utter_aerodynamics:
+  - text: |+
+      The laws of physics that govern the flight of every drone are introduced in this lesson. With treatments for both multi-rotor and fixed-wing configurations, you’ll learn about the conditions that enable a drone to stay airborne.
+      Going beyond the basics, get a glimpse of the future of drone flight, which is autonomous, enabled by developing sophisticated algorithms for flight control.
+
+      For more information, review Step 1 of the program.
+
+  utter_airports:
+  - text: |+
+      Airports, along with the airspace and air traffic control facilities, constitute the National Airspace System or NAS. This ecosystem of assets, personnel and regulations forms one of the most complex aviation systems in the world.
+    
+      For more information, review Step 1 of the program.
+
+  utter_commercial_use:
+  - text: |+
+      With over a century of military development, drones start appearing in the commercial sector. It begins with government agencies looking into drone use for emergency response and disaster management.
+      By 2006, the FAA issues its first commercial drone license. A surge in private sector applications begins, with a preference for multi-rotors due to (still in place) restrictions on beyond-visual-line-of-sight (BVLOS) operations.
+
+      For more drone history, revisit "A history of drones".
+
+  utter_can_fly:
+  - buttons:
+    - payload: /steps
+      title: Flight to the Future
+    - payload: /list_courses
+      title: Courses
+    text: Absolutely! Check out these choices to learn how.
+
+  utter_steps:
+  - text: |+
+      Our Flight to the Future program is an online remote training and success strategy that consists of the following four steps
+
+      Step 1 – Drone Pilot Training & FAA Certification.
+          You will go through ground and flight training to prepare you for the FAA UAV pilot certification. There is a streamlined version of this step for pilots.
+
+      Step 2 – Learn to use the AD Cloud (A one-year subscription will be included in this program).
+          Learn how to use the AD Command and Control module to set up and execute UAV missions.
+
+      Step 3 – Master a commercial solution of your choosing.
+          Get your drone and cloud skills optimized for a specific application from a range of choices.
+
+      Step 4 – Start your UAV operations!
+          In this step the following are included business setup, insurance, hardware and sensor package selection, and Drone on Demand App on boarding for job applications
+
+  utter_how_much:
+  - text: |+
+      The drone economy is already valued at $20 billion a year. As a Flight to the Future graduate, you will be in complete control of how much you want to work.
+      Drone service is one of the fastest growing industries in the US. Demand is strong across all sectors and locations. Established businesses currently charge hundreds of dollars an hour for basic drone services.
+
+  utter_performance:
+  - text: |+
+      The drone economy is already valued at $20 billion a year. As a Flight to the Future graduate, you will be in complete control of how much you want to work.
+      
+      Drone service is one of the fastest growing industries in the US. Demand is strong across all sectors and locations.
+      Established businesses currently charge hundreds of dollars an hour for basic drone services.
+
+  utter_lesson_one_readings:
+  - text: |+
+      [The WIRED Guide to Drones] (https://www.wired.com/story/guide-drones/)
+
+      [Uber unveils six-rotor food delivery drones ahead of 2020 test run](https://www.designboom.com/technology/uber-eats-food-delivery-drones-10-29-2019/)
+
+      [Insights Before Flights: How Community Perceptions Can Make or Break Medical Drone Deliveries](https://www.mdpi.com/2504-446X/4/3/51)
+
+      [24 Underwater Drones – The Boom in Robotics Beneath the Waves](https://www.livescience.com/61431-underwater-drones.html)
+
+      [Deploying drones to prepare for climate change](https://news.mit.edu/2019/norhan-bayomi-drones-climate-change-1004)
+
+      [Design Essentials: For UAVs and Drones, Batteries are Included](https://www.machinedesign.com/mechanical-motion-systems/article/21835356/design-essentials-for-uavs-and-drones-batteries-are-included)
+
+      [Classifications, applications, and design challenges of drones: A review](https://www.researchgate.net/publication/316673697_Classifications_applications_and_design_challenges_of_drones_A_review)
+
+  utter_find_jobs:
+  - text: |-
+      You can find a job using our Drone on Demand app. It works like Uber. You pick the jobs that you want, and the rest go to other operators in the area.
+      Drone on Demand is timed to launch later this year when the first round of FF graduates are trained and equipped.
+
+actions:
+  - action_ask_weather
+forms: {}
+e2e_actions: []
