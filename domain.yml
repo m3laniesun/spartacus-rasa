@@ -5,98 +5,532 @@ session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
-- greet
-- goodbye
-- affirm
-- deny
-- mood_great
-- mood_unhappy
-- bot_challenge
-- aboutad
-- services
-- list_courses
-- fttf_intro
-- fttf_benefits
-- fttf_complete
-- fttf_kit
+- greet:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- affirm:
+    use_entities: true
+- deny:
+    use_entities: true
+- mood_great:
+    use_entities: true
+- mood_unhappy:
+    use_entities: true
+- bot_challenge:
+    use_entities: true
+- aboutad:
+    use_entities: true
+- services:
+    use_entities: true
+- list_courses:
+    use_entities: true
+- fttf_intro:
+    use_entities: true
+- fttf_benefits:
+    use_entities: true
+- fttf_complete:
+    use_entities: true
+- fttf_kit:
+    use_entities: true
 - lesson_one:
     use_entities: true
 - show_modules:
     use_entities: true
 - take_quiz:
     use_entities: true
-- weather_effect
+- weather_effect:
+    use_entities: true
 - thank:
     use_entities: true
-- tell_more
-- cost
-- personality
-- jokes
-- ask_weather
-- time
-- aerial_bombing
-- faq
-- aerodynamics
-- airports
-- can_fly
-- commercial_use
-- steps
-- how_much
-- performance
-- lesson_one_readings
-- find_jobs
-- module_1_2_1
-- module_1_2_2
-- module_1_2_3
-- module_1_2_4
-- module_1_2_5
-- module_1_2_6
-- module_1_2_7
-- module_1_2_8
-- module_1_2_9
-
+- tell_more:
+    use_entities: true
+- cost:
+    use_entities: true
+- personality:
+    use_entities: true
+- jokes:
+    use_entities: true
+- ask_weather:
+    use_entities: true
+- time:
+    use_entities: true
+- aerial_bombing:
+    use_entities: true
+- faq:
+    use_entities: true
+- aerodynamics:
+    use_entities: true
+- airports:
+    use_entities: true
+- can_fly:
+    use_entities: true
+- commercial_use:
+    use_entities: true
+- steps:
+    use_entities: true
+- how_much:
+    use_entities: true
+- performance:
+    use_entities: true
+- lesson_one_readings:
+    use_entities: true
+- find_jobs:
+    use_entities: true
+- module_1_2_1:
+    use_entities: true
+- module_1_2_2:
+    use_entities: true
+- module_1_2_3:
+    use_entities: true
+- module_1_2_4:
+    use_entities: true
+- module_1_2_5:
+    use_entities: true
+- module_1_2_6:
+    use_entities: true
+- module_1_2_7:
+    use_entities: true
+- module_1_2_8:
+    use_entities: true
+- module_1_2_9:
+    use_entities: true
+- tell_name:
+    use_entities: true
+- give_name:
+    use_entities: true
+- repeat_name:
+    use_entities: true
+- answer_a:
+    use_entities: true
+- answer_b:
+    use_entities: true
+- answer_c:
+    use_entities: true
+- answer_d:
+    use_entities: true
+- quiz:
+    use_entities: true
+- FirstName:
+    use_entities: true
+- LastName:
+    use_entities: true
+- login:
+    use_entities: true
+- email:
+    use_entities: true
+- create_acc:
+    use_entities: true
+- quiz_score:
+    use_entities: true
+- quiz_topic:
+    use_entities: true
+- name:
+    use_entities: true
+- step1_1_1:
+    use_entities: true
+- step1_1_2:
+    use_entities: true
+- step1_1_3:
+    use_entities: true
+- step1_1_4:
+    use_entities: true
+- step1_1_5:
+    use_entities: true
+- step1_1_6:
+    use_entities: true
+- step1_1_7:
+    use_entities: true
+- step1_1_8:
+    use_entities: true
+- step1_1_9:
+    use_entities: true
+- step1_1_10:
+    use_entities: true
+- step1_1_11:
+    use_entities: true
+- step1_1_12:
+    use_entities: true
+- step_one:
+    use_entities: true
 entities:
 - name
-slots: {} 
+- location
+- slot
+slots:
+  name:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+  quiz_11:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+  quiz_12:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+  quiz_13:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+  quiz_14:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+  quiz_15:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+  firstN:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: false
+    influence_conversation: true
+  lastN:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: false
+    influence_conversation: true
 responses:
   utter_greet:
-  - image: spar_left.gif
+  - image: spartacus-nod.gif
     text: Hello. I'm here to assist you with the Flight to the Future program.
+  utter_home:
+  - image: spartacus-nod.gif
+    text: |-
+      Welcome to Total Planetary Protection.
+
+      I am Spartacus, your cognitive assistant, which means I deploy deep learning capabilities to get better at anticipating your needs over time.
+
+      This page is your main dashboard for anything related to drones. Get trained and certified asa drone pilot, plan and execute drone operations 
+      or sign up for a variety of business services, all at the touch of a button.
+
+      For Flight to the Future participants, this drone-specific AD Cloud is powered by three services:
+
+      Flight to the Future or F2F is an advanced drone training program focused on all the steps required to become a highly capable UAS service provider. 
+
+      Along with an online simulator and business set up support, F2F takes you from basic education and FAA Part 107 certification, to owning your own drone business
+
+      AD’s Command and Control, or simply AD C2, is where you are able to plan and deploy multiple drone missions simultaneously. 
+
+      With an advanced map-based interface for setting up operation details, and an automatic system for obtaining any necessary FAA approvals, 
+      C2 is a one-stop-shop platform for executing safe, reliable and compliant drone flights.
+
+      Finally, we have Aquiline’s drone-on-demand service, known as ADoD, which will be launched in the summer of 2021. 
+
+      The purpose of ADoD is to connect potential clients with drone operators, providing a real-time job board that is available to our Flight to the Future graduates and select UAS providers.
+
+      Feel free to browse through the different services to learn more about each offering, and feel free to contact us with any questions that you may have. 
+
+      AD is here to support you throughout your entire journey.
+  utter_toplevel:
+  - text: |-
+      Welcome to Flight to the Future.
+
+      This educational platform is divided into four steps, containing 36 modules.
+
+      The core modules each have seven segments: introduction, presentation, concept, in-depth, recap, reading list and assessment. You will progress serially through the program as you complete each segment, in the initial phase. Once you obtain your Part 107 license, you can jump to any lesson without the need for serial progression.
+
+      Both the presentation and concept segment for each module can be viewed either in text or video format, allowing you to learn in a way that suits your personal preference.
+
+      Step 1 is training and certification, where you will obtain a solid understanding of key UAV concepts, that are part of the official FAA study guide for the Part 107 examination. Includes topics such as the physics of flight, weather theory and FAA regulatory details.
+
+      Step 2 is all about cloud technologies and how they are reshaping the UAV industry. Concepts such as AI and the Internet of Things will be discussed, and participants will start using the AD cloud and its C2 service platform to plan, set up and execute mock drone missions. 
+
+      Step 3 delves into mastering a solution, where we take a deep look into specific commercial UAV applications and the special skills required in each. There are many industry applications for UAVs and we’ll examine a number of them across several ‘super-categories’ such as asset inspection, surveying, security and so on.
+
+      Step 4 is about your drone business, where we go into details about how to set up, structure, operate and market your UAV business in a professional and efficient manner, with risk management and FAA compliance.
+
+      By completing the four steps in Flight to the Future, you will become a well-rounded and highly capable UAV service provider, possessing all the necessary know-how to launch commercial operations and generate multiple revenue streams.
+  utter_step1_intro:
+  - text: |-
+      Welcome to Step 1 of Flight to the Future.
+
+      This is training and certification, which is divided into 12 modules containing a total of 68 segments. Serial progression through the modules is required in this step of the program. At the end of this step, you will be ready to take and pass the FAA Part 107 exam for commercial drone pilots.
+
+      In the first half, you’ll take a deep dive into the nature of UAV systems, covering different aspects of how they operate and understanding the laws of physics behind drone flight as well as the forces and conditions that allow the aircraft to stay airborne. 
+
+      From atmospheric conditions to weight and balance restrictions, you’ll learn about key aspects that influence the safe operation of drone flights, such as payloads and aeronautical decision making, preparing you for responsible mission planning and execution.  
+
+      The second half deals with the FAA’s role in aviation, understanding how airspace is categorized into different classes within the National Airspace System, and the implications and restrictions imposed on flight due to various regulations and advisories. 
+
+      The modules provide a comprehensive treatment of all the FAA study topics for the Part 107 exam, which is a vital steppingstone for becoming a proficient drone business operator. 
+
+      At the end of this step, you will take a full practice test, after which you will be ready to sit for the actual exam and obtain your FAA Part 107 license for commercial drone operations. 
+  utter_step1_1_1:
+  - text: |-
+      Prepare for takeoff!
+
+      Welcome to the future of aviation. This is step 1 in the Flight to the Future program. At the completion of this step, you will become an FAA licensed commercial drone pilot.
+
+      From understanding how drones are made to the rules of operating them in the National Airspace, you’ll explore all the topics that will help you pass the FAA Part 107 exam for drone pilots.
+
+      The first part of this educational journey sheds light on how drones work, the technologies that are utilized and the best practices that have emerged in the UAV industry. 
+
+      You’ll learn about drone science and engineering, airframe design and flight characteristics that are key to understanding the capabilities of your aviation equipment as a future drone operator.
+
+      The second part of this step focuses on the rules, regulations and environmental restrictions that define and influence your operational processes. In particular, you’ll learn about the Federal Aviation Administration or FAA and its responsibilities for governing civilian aviation. 
+
+      The future of aviation will integrate manned and unmanned aircraft in the same airspace. The modules in this step will help you understand the complex ecosystem of airports, traffic controllers and navigational facilities that make up the National Airspace System, preparing you for safe and efficient drone operations. 
+  utter_step1_1_2:
+  - text: |-
+      Drone systems
+
+      What are drones? From multi-rotors to fixed-wing, drones come in many shapes and sizes. 
+      In this lesson you’ll learn how drones are made, what their vital components are, and the engineering that makes it all possible.
+
+      With emphasis on multi-rotors, you’ll get a good understanding of the vital systems and technologies employed.
+      For additional perspective, delve into the history of drones and discover how this technological marvel evolved.
+
+      In this module, you will gain insight into how AD drones are transforming commercial drone operations using advanced technologies that allow for increased autonomy, automated mission planning, compliance, and management. 
+
+      In automated mission planning, for instance, the rapid gathering and definition of mission parameters result in the optimization of workloads, achieving solution repeatability. 
+
+      You’ll learn how UAV systems are engineered, with a focus on both air and ground segments. You’ll gain an understanding of how mission considerations play a crucial role in determining engineering details. 
+
+      As you’ll see in this module, drone engineering is fairly simple to start with but becomes more complex as you specialize in real-world situations.
+
+      A brief history of drones will also be presented in this module, giving you a deeper context on how technologies have evolved over the years and how some game-changing discoveries led to the development of UAVs as we know them today. 
+
+      By the end of this module, you will have gained valuable knowledge on how drone systems work and will be ready to study the science behind drone flight.
+  utter_step1_1_3:
+  - text: |-
+      Aerodynamics
+
+      The laws of physics that govern the flight of every drone are introduced in this module. 
+
+      Understand the forces involved, and the efforts to counter them in flight. With treatments for both multi-rotor and fixed-wing configurations, you’ll learn about the conditions that enable a drone to stay airborne. 
+
+      Going beyond the basics, get a glimpse of the future of drone flight, which is autonomous, enabled by developing sophisticated algorithms for flight control.
+
+      In this module, we will look into the laws of physics which are relevant to drone flight, with emphasis on the concept of vectors and how it can be used to understand the forces acting on a drone. 
+
+      You will also learn how the interplay of forces such as gravity and lift, along with aerodynamic laws and the conservation of angular momentum makes drone flight possible. 
+
+      We will then move on to study the specifics of how drones fly, focusing on how different parts of a multi-rotor are designed to overcome forces like gravity and execute flight commands. 
+
+      From the engineering behind UAVs to the different maneuvers that can happen during a mission, we will understand how intelligent design and basic principles of aerodynamics, forces, and angular momentum, along with a power source, enable drones to fly.
+
+      Lastly, we will look at how control theory, a framework for controlling dynamical variables in any engineered device, is applied to UAVs, allowing for capabilities such as autonomous flight and drone swarms. 
+
+      By the end of this module, you have attained valuable knowledge on aerodynamics and will be ready to study UAV performance.
+  utter_step1_1_4:
+  - text: |-
+      Performance
+
+      Like for manned aircraft, drone performance can be defined in ways that are measurable. A number of factors affect performance. In this module, you’ll see how atmospheric and weather conditions can influence drone flights. 
+
+      High performance drones exist in a variety of categories. From racing drones, to autonomously controlled swarms, discover some of the cutting-edge efforts that are being made to improve capabilities.
+
+      In this module, we will gather an understanding of how the atmosphere can influence aerial operations and safety.  As we know, adverse weather can hamper or even ground aerial operations, 
+
+      therefore it is imperative to the safety of UAV missions to be able to recognize the impact atmospheric and weather conditions have on drone operations.
+
+      We will dive further into atmospheric stability, clouds, and thunderstorm lifecycles, which are important atmospheric processes that all mission planners need to be on the lookout for. 
+      You will attain insight into the different stages of thunderstorm cycles, as well as the effects they can have on UAVs, thus preparing you to become a safe UAS provider. 
+
+      Last but not least, we will look into autonomous light swarms, which are also known as drone light shows. These consist of UAVs equipped with LEDs that are flown in a formation to create moving, illuminated, synchronized, and choreographed images in the sky.
+
+      By the end of this module, you will have attained valuable knowledge on drone performance and will be ready to study weight and balance.
+  utter_step1_1_5:
+  - text: |-
+      Weight and balance
+
+      All aircraft have weight and balance restrictions. Drones are no exception. In order to safely operate drones, you’ll need to understand the ways in which weight and balance affect flight and the procedures to achieve stability. 
+
+      Payloads play a crucial role and you’ll learn how to properly follow loading rules based on the drone capability. You’ll also get a closer look at some heavy-lift UAV configurations that are being pioneered for cargo and passengers.
+
+      Here you will learn about how the weight distribution on the drone affects its center of gravity, which, in turn, affects the craft's balance while in flight. Both weight distribution and balance are critical to flight performance. 
+
+      Optimizing a drone's balance, by considering how the position of the battery, camera, and other payloads will affect the position of the center of gravity is crucial for achieving ideal results. 
+
+      We will also approach how a multi-rotor drone is properly loaded for flight and how it is the pilot-in-command’s responsibility of examining the payload to determine how the center of gravity will shift. 
+
+      In this module, we will also delve into heavy-lift multi-rotors, which can carry various types of cargo and generally employ gas-powered or hybrid engines, making them ideally suited for emergency response and life-critical delivery services.
+
+      By the end of this module, you have attained valuable knowledge on drone weight, balance, and will be ready to study aeronautical decision-making.
+  utter_step1_1_6:
+  - text: |-
+      Aeronautical decision-making
+
+      Aeronautical decision-making or ADM is the mental process used by pilots to determine the best course of action in an aviation environment. ADM skills are crucial for operating aircraft in a safe and responsible manner.
+
+      In this module, you’ll learn best practices and ADM procedures to ensure good risk management for drone operations. For greater context, explore the history of ADM and learn how pilots get trained in this evolving arena.
+
+      You’ll understand how ADM deals with risk assessment and stress management, which includes understanding how human characteristics influence the decision-making process, and how these factors should be mitigated to heighten safety when operating an aircraft.
+
+      On top of that, you will explore how personal attitudes can easily affect a person's ability to make good decisions, especially in an emergency or when time is of the essence. attitude is defined as being a motivational predisposition to respond to people, situations, or events in a given manner. 
+
+      Finally, you will learn about the range of aeronautical decision-making tools available for pilot training. Ranging from 5P and 3P models that use PAVE, CARE, and TEAM checklists, as well as, the DECIDE model. 
+
+      As you will see, these are essential tools for training pilots and applying ADM in your daily routine. 
+
+      By the end of this module, you will have attained valuable knowledge on aeronautical decision-making and be ready to study the FAA.
+  utter_step1_1_7:
+  - text: |-
+      The FAA's role in aviation
+
+      The Federal Aviation Administration or FAA is a government agency that falls under the US Department of Transportation and is responsible for the safety of all civilian aviation in the United States. 
+
+      In this module you’ll learn about the important role the FAA plays in commercial drone operations and the services, regulations and partnerships they have in place to facilitate the expansion of the UAV industry.
+
+      Here we will explore the various directives, activities, and services that fall under the FAA. Such as safety protocols, the use of new technologies, environmental impact issues within the aviation industry, and seek to understand how these are regulated or influenced by FAA rules. 
+
+      We will also prepare you for obtaining your Remote Pilot Certificate from the FAA, which requires that you demonstrate that you understand the regulations, operating requirements, and procedures for safely flying drones.
+
+      Finally, we will look at the FAA forecast that the Small UAS (sUAS) model fleet will likely more than double in size over the next five years, from the present 1.1 million units to over 2.4 million units. 
+
+      As you will see, this is in great part due to the social desire for enhanced connectivity and promoting the economic vibrancy of remote and rural locations within the United States. 
+
+      By the end of this module, you will have attained valuable knowledge on the FAA's role in aviation and will be ready to study the NAS.
+  utter_step1_1_8:
+  - text: |-
+      Airports and the National Airspace
+
+      Learn about airports and how they are categorized by the FAA. Airports influence the classification of airspace, so a good grasp of this knowledge is essential for safe and authorized drone operations. 
+
+      Airports, along with the airspace and air traffic control facilities, constitute the National Airspace System or NAS. This ecosystem of assets, personnel and regulations forms one of the most complex aviation systems in the world.
+
+      In this segment, you will obtain in-depth knowledge of airports and the National Airspace System. As a UAV pilot, you are required to have working knowledge and understanding of how to operate safely and always be in compliance with the Federal rules governing airports and the National Airspace System.
+
+      We will also take a closer look at the main elements that determine compliance and the roadmap for increasingly integrating commercial UAVs into the NAS, which is also a key responsibility of drone pilots.
+
+      On top of that, we will learn about point-to-point autonomous aviation and how it is poised to take off, changing the way we think about air transport as well as its impact on future urban planning strategies. We will also look at the challenges that lie in integrating autonomous flight into the NAS.
+
+      By the end of this module, you will have attained valuable knowledge on airports and the NAS and will be ready to study aviation weather and UAV procedures.
+  utter_step1_1_9:
+  - text: |-
+      Aviation weather and UAV procedures
+
+      Weather reporting and prediction along with defined and accurate procedures can greatly influence performance and safety. Combined and properly utilized, they will enhance the measure of your success. 
+
+      In this module, you’ll learn how to apply the various sources of weather reports and forecasts along with proven industry procedures, including emergency, radio communications, and maintenance/preflight inspections to your drone operations.
+
+      First, we will define “weather service”, which is a term used to describe the collective data from the National Weather Service, the Federal Aviation Administration, the Department of Defense, and other aviation groups and individuals, so that you may know how to integrate different sets of weather data to enhance your drone operations.
+
+      Also, we will explore the three procedures that are especially important for drone operators: maintenance and pre-flight inspection, in-flight emergency procedures, and radio communications. Comprehending these three key aspects is not only vital to mission success, but also to ensuring mission safety and compliance. 
+
+      Lastly, we will take a deep dive into the specific types of weather reports, leads such as the Meteorological Aerodrome Report, and the Terminal Aerodrome Forecast, to allow integration between different sources during pre-flight planning and reporting. 
+
+      By the end of this module, you will have attained valuable knowledge on aviation weather and UAV procedures and will be ready to study federal aviation regulations.
+  utter_step1_1_10:
+  - text: |-
+      Federal Aviation Regulations
+
+      Airspace is categorized as regulatory or non-regulatory by the FAA. Within these two groups, there are four types of airspace, determined by aircraft density, location, operational significance and other considerations. 
+
+      A range of advisories are applicable for each type of airspace. In this module, you’ll learn about the different FAA advisories across the National Airspace, and how they impact drone operations. 
+
+      In this module, you will get an overview of the most relevant components of Part 107, as well as, a few supplemental resources that will help you along your journey to certification. Such as specific operational regulations, where you can successfully navigate the requirements for becoming certified as a UAV pilot. 
+
+      You will also grasp the concept of Remote ID, defined by the FAA as the ability of an unmanned aircraft system in flight to provide identification information to other parties, that allows for law enforcement and federal security agencies to act quickly and effectively when a drone flies unsafely or approaches a restricted area.
+
+      To close, you will gain an understanding of practical examples of FARs and other advisories, unpacking some of the selected regulations that are most relevant to your drone business and that are likely to be included on your FAA Part 107 exam. 
+
+      By the end of this module, you will have attained valuable knowledge on FARs and will be ready for the FAA certification exam.
+  utter_step1_1_11:
+  - text: |-
+      FAA exam and certification
+
+      You’ve come this far and mastered the topics that are relevant to the FAA Part 107 exam for licensing commercial drone pilots. In this module, we’ll take a closer look at the examination and the process for taking it. 
+
+      From finding the nearest testing center to signing up for the exam, best practices and approaches are discussed. Finally, a realistic practice test is available to gauge your expertise and prepare you for the main event.
+
+      In this segment, we will summarize ten generally overlooked aspects of Part 107. As each individual has different learning patterns, discussing the “Top 10 questions about FAA Part 107” may or may not apply directly to you. Nevertheless, in this module, we will review our insights on these topics and provide a brief explanation for each key aspect.
+
+      You will also get a chance to examine ten key questions that have historically been a challenge for students. By reviewing this material, you’ll get a good sense of the topics involved and how the questions are constructed. The insights you gain from here will assist you in tackling some of the harder questions you may encounter on the examination. 
+
+      To finish off, you will take a practice exam, with the options of both pilot and non-pilot versions, so you may obtain a better feel of the actual exam experience.
+
+      By the end of this module, you will have attained valuable knowledge on how to pass your FAA exam and will be ready to take the official FAA Part 107 test. 
+  utter_step1_1_12:
+  - text: |-
+      I’m certified! What’s next?
+
+      Now that you are a FAA licensed commercial drone pilot, a world of opportunities await you. With Flight to the Future, you have access to cloud technologies, IoT connectivity and AI based analytics.
+
+      In step 2 of the program, you’ll learn about these cutting-edge technologies and start using some of them to plan and execute drone missions. You are ready now, to experience the power of the AD Cloud.
+
+      The AD Cloud is a specialized cloud for UAVs and the backbone of a full life cycle ecosystem for drones. You will learn about the key services that are being set up for operational managers, UAV business owners, and individual pilots.
+
+      Throughout the following modules, various performance-enhancing technological elements will be presented in detail. We will start with cloud computing and the benefits it can to provide, looking into the key issues you must consider when designing UAV solutions that rely on cloud capabilities.
+
+      We will also discuss Artificial Intelligence, the Internet of Things, and edge computing, establishing how these cutting-edge technologies are successfully integrating into commercially viable enterprise-class UAV systems.
+
+      In particular, you’ll get an exclusive preview of AD’s LAANC enabled Command and Control platform, or C2. Leveraging AD Cloud connected drones, powerful features for drone management and mission execution will be on demonstration as you transition through step 2 of flight to the future.
+
+      With all this knowledge in hand, you will then be better prepared to navigate the vast capabilities of AD Cloud.
+  utter_step1:
+  - buttons:
+    - payload: /step1_intro
+      title: Intro
+    - payload: /step1_1_1
+      title: '1.1'
+    - payload: /step1_1_2
+      title: '1.2'
+    - payload: /step1_1_3
+      title: '1.3'
+    - payload: /step1_1_4
+      title: '1.4'
+    - payload: /step1_1_5
+      title: '1.5'
+    - payload: /step1_1_6
+      title: '1.6'
+    - payload: /step1_1_7
+      title: '1.7'
+    - payload: /step1_1_8
+      title: '1.8'
+    - payload: /step1_1_9
+      title: '1.9'
+    - payload: /step1_1_10
+      title: '1.10'
+    - payload: /step1_1_11
+      title: '1.11'
+    - payload: /step1_1_12
+      title: '1.12'
+    text: Welcome to Step One! Select a section to go over.
   utter_sorry:
-  - image: spar_negative.gif
+  - image: spartacus-negative.gif
     text: Sorry to hear that.
   utter_help:
   - text: Is there anything I can do to help?
   utter_okay:
-  - image: spar_nod.gif
+  - image: spartacus-nod.gif
     text: Okay, what can I help you with?
   utter_happy:
-  - image: spar_positive.gif
+  - image: spartacus-positive.gif
     text: Great, carry on!
-  - image: spar_positive.gif
-    text: Good to hear! 
+  - image: spartacus-positive.gif
+    text: Good to hear!
   utter_welcome:
-  - image: spar_nod.gif
+  - image: spartacus-nod.gif
     text: I'm happy to be of assistance!
-  - image: spar_nod.gif
+  - image: spartacus-nod.gif
     text: I'm glad to help.
-  - image: spar_nod.gif
+  - image: spartacus-nod.gif
     text: You're welcome.
   utter_goodbye:
-  - image: spar_positive.gif
+  - image: spartacus-nod.gif
     text: Goodbye! Let me know if there's anything else you need.
   utter_iamabot:
-  - image: spar_right.gif
+  - image: spartacus-right.gif
     text: I am Spartacus, a modular cognitive system used by the AD Cloud to extract deep insights.
   utter_aboutad:
-  - text: |+ 
+  - text: |
       Aquiline Drones is an independent, American drone solutions company comprised of highly experienced aviators, systems engineers, and IT gurus.
-      
+
       With a customer-centric model, US-based manufacturing and supply chain and world-class MRO services, we offer innovative and successful ways to use drones in commercial activities.
   utter_moread:
   - text: |+
       Aquiline Drones are supported by a dedicated UAV cloud, real-time OS, and autonomous drone operations with real-time control and dynamic in-field decision making capabilities.
-      
+
       These technological solutions provide a more expansive and deeper applicability across countless industries and environments by delivering real-time data insights.
 
       Aerospace-compliant processes for software, hardware manufacturing and systems integration, along with best-in-class mission capabilities are being planned and designed. 
@@ -106,53 +540,56 @@ responses:
   utter_services:
   - text: 'As a drone solutions company, we offer many different drone enterprise solutions: Life-critical delivery, Perimeter security, Law enforcement, Asset inspection, Surveying and mapping, Videography, Crop spraying, Livestock and wildlife (under development). Delivery (under development).'
   utter_courses:
-  - text: |+
+  - text: |
       GRND 101: An introduction to flying drones, the physics and aerodynamics of drone flight, and what is involved in drone missions. 
-      
+
       GRND 102: A look at the human factors of drone flights and the myriad of concerns drone pilots need to consider; including FAA rules and regulations, NAS, Weather, and Fars.
-      
+
       Cloud 101: A look at how the Aquiline Drones cloud solution will integrate and allow your drone business to succeed by using AI and the internet of things.
-      
+
       Cloud 102: This class delves deeper into cloud technologies and how our Mod approach and mission based asset management allows for your drone business to prosper.
-      
+
       UAS 101: Learn about how your commerical drone solution can benefit from the R2M2 approach.
-      
+
       UAS 102: Explore different market segments that are available to your commercial drone solution; videography, surveying, security, and inspection are all topics.
-      
+
       UAS 103: Provides simulations of each segment to allow your commercial drone solution to evolve and become profitable.
   utter_fttf_intro:
   - text: Flight to the Future is a comprehensive 6-8 week program that gives pilots, including small Unmanned Aerial Vehicle pilots, as well as the general public, the tools they need to learn how to own and operate their own commercial drone LLC.
   utter_fttf_benefits:
-  - text: |+
+  - text: |
       Flight to the Future (FF) is a real opportunity for you to take control of your income. 
-      
+
       At the end of the six week program, you will be fully licensed, trained how to maximize the AD Cloud, own your own limited liability company (LLC), and be fully onboarded to accept jobs through the world’s first Drone on Demand app.
-      
+
       AD packed tremendous value into the FF program:
       · $5,000 of training and services for $999.
       · Work on your schedule.
       · No need to slowly build and nurture a customer base.
-      
+
       · The very real potential to earn a six-figure income working part time.
       · No further investment! All costs such as drone financing will be deducted as you earn.
-  
+
       · No commitment. If life changes down the road you still have your own LLC and your commercial drone license. You own both! You are under no obligation to purchase AD products at the end of the program. 
   utter_fttf_complete:
   - text: |-
       Once you complete all four steps, you can download the Drone on Demand App, which is modeled similarly to that of UBER or Lyft where you will be connected through the app to job opportunities in your area.
-      
+
       Financing is also available at this point and will depend greatly on the sensor package that you require.
   utter_fttf_kit:
-  - text: |+ 
+  - text: |+
       The following is what a candidate will receive in their Flight to the Future success kit: 
-    
+
         • Virtual drone ground school training, hands on drone operation training, and assistance in becoming an FAA-Certified Drone Pilot 
-    
+
         • Interactive learning modules instructing candidates on how to use the AD Cloud, how to use their drone training for a specific commercial solution of their choosing, and how to run their own drone LLC 
-    
+
         • Access to our Drone on Demand app 
-    
+
         • A full year’s worth of insurance and a one-year subscription to our AD Cloud
+
+
+
   utter_lesson_one:
   - buttons:
     - payload: /show_modules
@@ -160,30 +597,123 @@ responses:
     - payload: /take_quiz
       title: Quiz
     text: Welcome to Lesson One!
-  utter_quiz:
-  - text: You can take the quiz [here](https://docs.google.com/forms/d/e/1FAIpQLSdfu9NzAMPS1CDTn40uSW0urkzSeMpuMHhczEk-Vo5rnzvKLg/viewform?embedded=true).
+  utter_quiz_1:
+  - text: |+
+      What is a drone?
+
+      A.) A drone is an unmanned aerial vehicle or UAV, flying in formation with other UAVs.
+
+      B.) A drone is any vehicle that can walk, run, crawl, roll, drive, swim, or fly with some autonomy.
+
+      C.) A drone is a machine that is used by people to do different kinds of work.
+
+      D.) The term drone is only used to refer to an unmanned aerial vehicle or UAV.
+
+
+  utter_quiz_2:
+  - text: |+
+      What is not allowed by the FAA regulations at present?
+
+      A.) Using a recreational drone for commercial applications.
+
+      B.) Flying an octocopter drone.
+
+      C.) Flying more than one drone at a time.
+
+      D.) Flying a drone at twilight.
+
+  utter_quiz_3:
+  - text: |+
+      What is the main purpose of the transceiver?
+
+      A.) To enable communications to and from the ground segment.
+
+      B.) To enable satellite communications between the drone and the ground segment.
+
+      C.) To monitor the condition of the drone payload.
+
+      D.) To manage power from the battery to the other drone components.
+
+  utter_quiz_4:
+  - text: |+
+      Historically, drones first appeared:
+
+      A.) In coastline surveying operations during the early Twentieth Century.
+
+      B.) When early unmanned planes were used to transport goods.
+
+      C.) When hobbyists started tinkering with remote control planes.
+
+      D.) In warfare, where they were used as aerial torpedoes.
+
+  utter_quiz_5:
+  - text: |+
+      Yawing is when:
+
+      A.) A drone rotates left or right when viewed from the top or bottom.
+
+      B.) A drone corrects its flight path in windy conditions.
+
+      C.) A drone gains or loses altitude while flying forward.
+
+      D.) The front of the drone moves up or down.
+
+  utter_quiz_start:
+  - text: Alright, let's get started.
+  utter_quiz_correct:
+  - text: |+
+      Correct answer, continue on! 
+
+      Good job. Onto the next.
+
+      Nice, keep going.
+
+  utter_quiz_final_correct:
+  - text: That's the right choice. You have finished the quiz.
+  utter_quiz_wrong:
+  - text: That is not the right answer.
+  - text: Incorrect choice.
+  - text: You have selected a wrong answer.
+  utter_results:
+  - text: |+
+      You scored 7 out of 10, 70%. This is not a passing score. 
+
+      I recommend reviewing the material in module 1.2.7. 
+
+      Look over the history, components, and the types of drones.
+
+  utter_quiz_response:
+  - buttons:
+    - payload: /answer_a
+      title: A
+    - payload: /answer_b
+      title: B
+    - payload: /answer_c
+      title: C
+    - payload: /answer_d
+      title: D
+    text: Select an answer.
   utter_modules:
   - buttons:
     - payload: /module_1_2_1
-      title: "1.2.1"
+      title: 1.2.1
     - payload: /module_1_2_2
-      title: "1.2.2"
+      title: 1.2.2
     - payload: /module_1_2_3
-      title: "1.2.3"
+      title: 1.2.3
     - payload: /module_1_2_4
-      title: "1.2.4"
+      title: 1.2.4
     - payload: /module_1_2_5
-      title: "1.2.5"
+      title: 1.2.5
     - payload: /module_1_2_6
-      title: "1.2.6"
+      title: 1.2.6
     - payload: /module_1_2_7
-      title: "1.2.7"
+      title: 1.2.7
     - payload: /module_1_2_8
-      title: "1.2.8"
+      title: 1.2.8
     - payload: /module_1_2_9
-      title: "1.2.9"
+      title: 1.2.9
     text: Select a section to go over.
-
   utter_module_1_2_1:
   - text: |+
       Welcome to the future of aviation. This is step 1 in the Flight to the Future program.
@@ -209,9 +739,9 @@ responses:
 
       Drones in general describe machines that have some level of independence and can operate without human intervention or assistance
       for periods of time. To get a deeper understanding of drones and drone systems, we have to start by defining them. 
-      
+
       Although unmanned aerial vehicles or UAVs have become synonymous with the word drones, a large variety of machines can fall under this category.
-      
+
       As a future unmanned aerial services or UAS provider, you should have a good grasp of the concepts and technologies that converge in engineering
       and operating drones.
 
@@ -220,16 +750,16 @@ responses:
       Technologies transforming the industry
 
       Then there is the autonomous capability – or at least some degree of automated operations that are a universal characteristic of all drones.
-      
+
       From the perspective of a commercial drone operator, the industry is changing rapidly. Many of the core technologies are rapidly
       evolving – enabling new, innovative solutions and business models.
 
       This lesson will introduce you to some of those technologies, notably cloud computing and artificial intelligence.
       With the advent of wireless connectivity, these technologies are transforming how unmanned aerial missions are planned and executed.
-      
+
       You’ll learn the difference between active and passive drone missions and how sensors and payloads define capabilities. 
       And despite the versatile nature of these capabilities, specialized industry solutions have emerged and are rapidly evolving. 
-      
+
       As a future UAS provider, you need to be keenly aware of the trends and future directions.
 
   utter_module_1_2_5:
@@ -239,17 +769,17 @@ responses:
 
       Rapid expansion of this industry requires a deep integration of UAV services into the National Airspace System or NAS. 
       The Federal Aviation Administration, or FAA, was initially slow in taking steps to do this.
-      
+
       However, since 2016 they have ramped up their efforts to provide regulatory oversight on UAV operations.
       You’ll get a good introduction to the current picture, preparing you for a deeper dive in subsequent lessons.
 
   utter_module_1_2_6:
   - text: |+
       Drone systems
-      
+
       A drone system will consist of an Air Segment and Ground Segment. The Air Segment includes everything that flies to perform a mission.
       Namely the UAV and a payload. 
-      
+
       The Ground Segment includes the technology that is fixed to the ground and manages the UAV from mission planning
       to completion including post mission reporting. Drone engineering is focused on the air segment of the system.
 
@@ -257,29 +787,29 @@ responses:
   utter_module_1_2_7:
   - text: |+
       Drone engineering and electronics
-      
+
       Next, we’ll turn attention to the vehicle itself – the unmanned aerial vehicle.
-      
+
       There are two basic configurations: fixed wing and VTOL (vertical takeoff and landing).
       The focus in our curriculum, will be on VTOL versions.
-      
+
       Additionally, as you’ll see later, current regulations usually don’t permit BVLOS (beyond visual line of sight) operations.
-      
+
       So the main choice of propulsion becomes battery power, which is increasingly suitable for short flights.
       Information on gas powered engines and hybrid configurations can be found in the lesson bibliography.
-      
+
       The key electronic components in a VTOL are a transceiver, a flight controller and a regulator-distributor.
       Integrated with these, are the drone motors and the battery of course. 
-      
+
       As you’ll discover later, mission specifics can influence the exact nature of the technical capabilities. 
 
       For example, a GPS card is an option that can be added for enhanced flight control if the selected flight controller can leverage
       GPS for autonomous navigation.
-      
+
       A transceiver receives and sends control data as well as payload data between the UAV and the ground segment.
 
       So, if the UAV is only flown by a direct radio frequency (RF) hand controller, then it only needs an RF transceiver. 
-      
+
       An LTE (Long-Term Evolution) or satellite transceiver is needed if the UAV is used for longer distance missions.
 
       Take a deeper dive on these topics in the concept section of this lesson.
@@ -287,18 +817,18 @@ responses:
   utter_module_1_2_8:
   - text: |+
       Sensors and payloads
-      
+
       Sensors vary based on mission requirements and vehicle capability. Full spectrum observational sensors are available.
-      
+
       Additionally, specialized equipment such as LIDAR (using lasers) is increasingly in use. Fire and radiation detection sensors 
       are amongst some of the most advanced capabilities being developed for commercial use.
 
       Payloads are the next evolution in commercial drone operations. 
       Due to power constraints, UAVs are often built around specific payloads. 
-      
+
       For example, medical delivery requirements may require a refrigerated payload to be maintained during transport. 
       Nevertheless, more generalized capabilities are being devised to enable drones to perform multiple types of missions.
-  
+
   utter_module_1_2_9:
   - text: |+
       The British Queen Bee, a radio-controlled target drone from the 1930s
@@ -306,24 +836,23 @@ responses:
       Finally, a bit of history
 
       Drones, specifically the aerial variety, have been evolving for over a century now. Their origins are in warfare and military applications.
-      
+
       To understand how the age of commercial drones appeared in the past couple of decades, its essential to understand the milestones that preceded.
 
       We’ll look at how drones first made their appearance as aerial bombs, then moved on to become radio-controlled targets 
       for anti-aircraft defense training.
       They eventually became jet powered and could be used for high altitude reconnaissance missions. 
-      
+
       Finally, in the last decade of the Twentieth Century, their use in military expanded rapidly, laying the groundwork for commercial versions 
       to make their way into the market.
 
   utter_weather_effect:
-  - text: Weather prediction is now an essential component of all societal activities.
-          It is of even greater significance in aviation, where it can greatly influence performance and safety. For more information, review Step 1 of the program.
+  - text: Weather prediction is now an essential component of all societal activities. It is of even greater significance in aviation, where it can greatly influence performance and safety. For more information, review Step 1 of the program.
   utter_cost:
   - text: |-
       The $999 Success Kit is designed for students with no prior aviation experience.
       This kit is only $799 for those who are already sUAV certified.
-      
+
       Our Flight to the Future kit has $5000 worth of training and services. 
   utter_personality:
   - image: spar_right.gif
@@ -336,18 +865,15 @@ responses:
   - text: Piloting drones is fun! It has its ups and downs.
   utter_time:
   - text: The current time is displayed underneath this message.
-
   utter_bombing:
   - text: |+
       On August 22, 1849, Austria launched an aerial assault on Venice when the city tried to gain independence, utilizing ballons to drop bombs.
       The rail-launched Kettering Aerial Torpedo “Bug” was created by the Dayton-Wright Airplane Company in 1917. It was basically an unmanned aerial torpedo, guided by preset controls.
-      
+
       For more drone history, revisit the "A history of drones" lesson.
 
   utter_faq:
   - text: Our FAQ is currently in development. If you have additional questions not covered here, please visit our complete FAQ page!
-
-
   utter_aerodynamics:
   - text: |+
       The laws of physics that govern the flight of every drone are introduced in this lesson. With treatments for both multi-rotor and fixed-wing configurations, you’ll learn about the conditions that enable a drone to stay airborne.
@@ -358,7 +884,7 @@ responses:
   utter_airports:
   - text: |+
       Airports, along with the airspace and air traffic control facilities, constitute the National Airspace System or NAS. This ecosystem of assets, personnel and regulations forms one of the most complex aviation systems in the world.
-    
+
       For more information, review Step 1 of the program.
 
   utter_commercial_use:
@@ -375,7 +901,6 @@ responses:
     - payload: /list_courses
       title: Courses
     text: Absolutely! Check out these choices to learn how.
-
   utter_steps:
   - text: |+
       Our Flight to the Future program is an online remote training and success strategy that consists of the following four steps
@@ -400,7 +925,7 @@ responses:
   utter_performance:
   - text: |+
       The drone economy is already valued at $20 billion a year. As a Flight to the Future graduate, you will be in complete control of how much you want to work.
-      
+
       Drone service is one of the fastest growing industries in the US. Demand is strong across all sectors and locations.
       Established businesses currently charge hundreds of dollars an hour for basic drone services.
 
@@ -424,8 +949,27 @@ responses:
   - text: |-
       You can find a job using our Drone on Demand app. It works like Uber. You pick the jobs that you want, and the rest go to other operators in the area.
       Drone on Demand is timed to launch later this year when the first round of FF graduates are trained and equipped.
-
+  utter_ask_name:
+  - text: What is your name?
+  utter_first_name:
+  - text: What is your first name?
+  utter_last_name:
+  - text: What is your last name?
+  utter_email:
+  - text: What is your email?
+  utter_login:
+  - text: 'Enter your e-mail address:'
+  utter_login_success:
+  - text: Login successful. Welcome John!
+  utter_create_acc:
+  - text: |
+      Welcome to Flight to the Future. Please input the following information when prompted:
+  utter_quiz_retrieval:
+  - text: Which quiz score would you like to view?
 actions:
-  - action_ask_weather
+- action_ask_weather
+- action_receive_name
+- action_say_name
+- validate_quiz_11
 forms: {}
 e2e_actions: []

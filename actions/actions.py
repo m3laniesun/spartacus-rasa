@@ -1,8 +1,9 @@
 import logging
 import json
 import requests
-import geocoder
-from datetime import datetime
+import datetime
+from rasa_sdk.events import ReminderScheduled
+
 from typing import Any, Dict, List, Text, Optional
 
 from rasa_sdk import Action, Tracker
@@ -14,6 +15,9 @@ from rasa_sdk.events import (
     ConversationPaused,
     EventType,
 )
+from rasa_sdk.events import SlotSet
+from rasa_sdk import Action, Tracker
+from rasa_sdk.executor import CollectingDispatcher
 
 USER_INTENT_OUT_OF_SCOPE = "out_of_scope"
 
@@ -45,3 +49,86 @@ class ActionAskWeather(Action):
         dispatcher.utter_message(text=result)
 
         return []
+
+
+class ActionFirstName(Action):
+
+    def name(self) -> Text:
+        #unique identifier of the form 
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        dispatcher.utter_message(template=utter_last_name)
+
+        return [SlotSet('firstN',tracker.latest_message['text'])]
+    
+
+class ActionReceiveName(Action):
+
+    def name(self) -> Text:
+        return "action_receive_name"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+    
+        text = tracker.latest_message['text']
+        dispatcher.utter_message(text=f"I'll remember your name, {text}!")
+        return [SlotSet("name", text)]
+    
+class ActionSayName(Action):
+
+    def name(self) -> Text:
+        return "action_say_name"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List [Dict[Text, Any]]:
+
+        name = tracker.get_slot("name")
+        if not name:
+            dispatcher.utter_message(text="I don't know your name.")
+        else:
+            dispatcher.utter_message(text=f"your name is {name}.")
+        return []
+
+class Validate_Quiz(Action):
+
+
+    def validate_quiz_11(
+        self,
+        slot_value: Any,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: DomainDict,
+    ) -> Dict[Text, Any]:
+        
+        if slot_value.lower() == 'b':
+            print("{slot_value} is correct!")
+            return {"get_point": 1}
+            
+        else:
+            print("{slot_value} is incorrect")
+            return {"get_point": 0}
+
+class UtterMessage(Action):
+    """Schedules a reminder, supplied with the last message's entities."""
+
+    def name(self) -> Text:
+        return "action_set_reminder"
+
+    async def run(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any],
+    ) -> List[Dict[Text, Any]]:
+
+        dispatcher.utter_message("First message")
+
+        date = datetime.datetime.now() + datetime.timedelta(seconds=5)
+        entities = tracker.latest_message.get("entities")
+
+       

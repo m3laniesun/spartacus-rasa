@@ -11,3 +11,33 @@ rules:
   steps:
   - intent: bot_challenge
   - action: utter_iamabot
+
+
+# - rule: Begin Quiz 1
+#   steps:
+#   - intent: quiz1
+#   - action: validate_quiz_11
+#   - action: validate_quiz_12
+#   - action: validate_quiz_13
+#   - action: validate_quiz_14
+#   - action: validate_quiz_15
+#   - active_loop: quiz_form
+
+# - rule: End quiz
+#   condition:
+#   - active_loop: quiz_form
+#   steps:
+#   - action: quiz_form
+#   - active_loop: null
+#   - slot_was_set:
+#     - requested_slot: null
+#   - action: utter_submit
+#   - action: utter_slots_values
+  
+
+# - rule: Schedule a reminder
+#   steps:
+#   - intent: ask_remind_call
+#     entities:
+#     - PERSON
+#   - action: action_schedule_reminder

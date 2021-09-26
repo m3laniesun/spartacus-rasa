@@ -2,10 +2,23 @@ version: "2.0"
 
 stories:
 
-- story: happy path
+- story: name path
+  steps:
+    - intent: tell_name
+    - action: utter_ask_name
+    - intent: give_name
+    - action: action_receive_name
+    - intent: repeat_name
+    - action: action_say_name
+
+
+- story: home 
   steps:
   - intent: greet
-  - action: utter_greet
+  - action: utter_home
+
+- story: happy path
+  steps:
   - intent: mood_great
   - action: utter_happy
 
@@ -28,8 +41,6 @@ stories:
 
 - story: sad path 1
   steps:
-  - intent: greet
-  - action: utter_greet
   - intent: mood_unhappy
   - action: utter_sorry
   - action: utter_help
@@ -38,8 +49,6 @@ stories:
 
 - story: sad path 2
   steps:
-  - intent: greet
-  - action: utter_greet
   - intent: mood_unhappy
   - action: utter_sorry
   - action: utter_help
@@ -75,11 +84,6 @@ stories:
   steps:
     - intent: lesson_one
     - action: utter_lesson_one
-
-- story: take quiz
-  steps:
-    - intent: take_quiz
-    - action: utter_quiz
 
 - story: show modules
   steps:
@@ -228,3 +232,114 @@ stories:
     - action: utter_modules
 
 
+
+- story: step one 
+  steps:
+    - intent: step_one
+    - action: utter_step1
+
+- story: step 1.1
+  steps:
+    - intent: step1_1_1
+    - action: utter_step1_1_1
+
+- story: step 1.2
+  steps:
+    - intent: step1_1_2
+    - action: utter_step1_1_2
+
+- story: step 1.3
+  steps:
+    - intent: step1_1_3
+    - action: utter_step1_1_3
+
+- story: step 1.4
+  steps:
+    - intent: step1_1_4
+    - action: utter_step1_1_4
+
+- story: step 1.5
+  steps:
+    - intent: step1_1_5
+    - action: utter_step1_1_5
+
+- story: step 1.6
+  steps:
+    - intent: step1_1_6
+    - action: utter_step1_1_6
+
+- story: step 1.7
+  steps:
+    - intent: step1_1_7
+    - action: utter_step1_1_7
+
+- story: step 1.8
+  steps:
+    - intent: step1_1_8
+    - action: utter_step1_1_8
+
+- story: step 1.9
+  steps:
+    - intent: step1_1_9
+    - action: utter_step1_1_9
+
+- story: step 1.10
+  steps:
+    - intent: step1_1_10
+    - action: utter_step1_1_10
+
+- story: step 1.11
+  steps:
+    - intent: step1_1_11
+    - action: utter_step1_1_11
+
+- story: step 1.12
+  steps:
+    - intent: step1_1_12
+    - action: utter_step1_1_12
+
+
+
+- story: quiz feedback
+  steps:
+    - intent: take_quiz
+    - action: utter_quiz_start
+    - action: utter_quiz_correct
+    - action: utter_quiz_wrong
+    - action: utter_quiz_correct
+    - action: utter_quiz_wrong
+    - action: utter_quiz_wrong
+    - action: utter_quiz_final_correct
+    - action: utter_results
+
+# - story: request user info
+#   steps:
+#     - utter_first_name
+#     - slot{"firstN": "Melanie"}
+#     - action_last_name
+#     - slot{"lirstN": "Sun"}
+
+
+- story: create account
+  steps: 
+    - intent: create_acc
+    - action: utter_create_acc
+    - action: utter_ask_name
+    - intent: give_name
+    - action: utter_email
+    - intent: email
+    - action: utter_login_success
+
+- story: login
+  steps:
+    - intent: login
+    - action: utter_login
+    - intent: email
+    - action: utter_login_success
+
+- story: quiz score
+  steps:
+    - intent: quiz_score
+    - action: utter_quiz_retrieval
+    - intent: quiz_topic
+    - action: utter_results
