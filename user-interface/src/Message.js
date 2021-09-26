@@ -42,8 +42,8 @@ const speak = (message: string, voiceLang: string) => {
   const toSpeak = new SpeechSynthesisUtterance(message);
   toSpeak.voice = voices.find(voice => voice.lang === voiceLang);
   let index = voices.indexOf(toSpeak.voice);
-  toSpeak.voice = voices[3];
-  console.log(voices[3]);
+  toSpeak.voice = voices[6];
+  console.log(voices[6]);
   synth.speak(toSpeak);
 };
 
