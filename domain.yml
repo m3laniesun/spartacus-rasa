@@ -153,6 +153,22 @@ intents:
     use_entities: true
 - step_one:
     use_entities: true
+- step_two:
+    use_entities: true
+- step2_2_1:
+    use_entities: true
+- step2_2_2:
+    use_entities: true
+- step2_2_3:
+    use_entities: true
+- step2_2_4:
+    use_entities: true
+- step2_2_5:
+    use_entities: true
+- step2_2_6:
+    use_entities: true
+- buy_drone
+
 entities:
 - name
 - location
@@ -201,7 +217,18 @@ slots:
 responses:
   utter_greet:
   - image: spartacus-nod.gif
-    text: Hello. I'm here to assist you with the Flight to the Future program.
+    text: Hello. How can I help you today?
+  utter_welcome_buttons:
+  - buttons:
+    - payload: /utter_home
+      title: Intro
+    - payload: /fttf_intro
+      title: Flight to the Future
+    - payload: /step_one
+      title: Step 1
+    - payload: /step_two
+      title: Step 2
+    text: Select an option.
   utter_home:
   - image: spartacus-nod.gif
     text: |-
@@ -467,6 +494,7 @@ responses:
       In particular, you’ll get an exclusive preview of AD’s LAANC enabled Command and Control platform, or C2. Leveraging AD Cloud connected drones, powerful features for drone management and mission execution will be on demonstration as you transition through step 2 of flight to the future.
 
       With all this knowledge in hand, you will then be better prepared to navigate the vast capabilities of AD Cloud.
+  
   utter_step1:
   - buttons:
     - payload: /step1_intro
@@ -495,7 +523,130 @@ responses:
       title: '1.11'
     - payload: /step1_1_12
       title: '1.12'
-    text: Welcome to Step One! Select a section to go over.
+    text: Welcome to Step One! Select a module to go over.
+
+
+  utter_step2_2_1:
+  - text: |
+      Imagine an ecosystem specially designed for drones.
+      
+      The third decade of the 21st. century will see great advances in the UAV industry. A confluence of technologies has made it possible to envision and develop a connected, scalable model for the industry, where all concerned parties have a port of call. UAV pilot training and education, flight control and pilot experiences, operations management, real-time data analysis and intelligent maintenance processes are some of the salient entry points in this ecosystem.
+      As we alluded to earlier, the hallmark of this ecosystem is the cloud.
+      
+      Aquiline Drones has set up a specialized, hybrid cloud tailored for anything and everything related to drones. An ever-evolving framework, the AD Cloud is powering key service platforms that cater to UAVs and UAS providers. The Flight to the Future is one of these highly integrated services, where future UAS providers can get the necessary education and prepare for their professional journey. Another crucial service is the AD Command and Control or C2 module.
+      C2 provides total UAV operations management with FAA compliance.
+      
+      The C2 dashboard is a one-stop shop for UAS business owners, operations managers and even pilots themselves. It is ideal for both a single UAV operator or a very large enterprise with thousands of pilots and aircraft. FAA compliance ensures proper UAV integration into the National Airspace. Precise operations planning and mission setup, along with cloud connectivity to the hardware ensures easy and scalable UAV deployments. 
+      
+      The C2 environment will sync up with the pilot dashboard in the larger ecosystem and will be FAA LAANC enabled. We’ll take a closer look at the C2 environment in later lessons.
+      
+      Then, of course, is the all-important pilot experience. An android based dashboard provides advanced flight planning and piloting controls. It is in sync with the C2 dashboard, so there is a single version of the truth for pilots and operations managers alike. The C2 Pilot dashboard will be included with an AD cloud-connected drone. 
+      UAV operations are planned and executed using a precise collaboration of capabilities between the C2 and C2 Pilot service platforms. The C2 dashboard is available on the browser and requires Internet connectivity to work. The C2 Pilot app is designed for on-site operations and requires LTE connectivity to sync with the main C2 platform. 
+      
+      However, in the absence of LTE signals, missions can still be flown by pilots using the controller wi-fi network with no loss of flight or data gathering capability. In this case, real-time data transmission will be downgraded to post-mission data uploads.
+      
+      Another important piece of this ecosystem is a revolutionary service platform, Aquiline’s Drone-on-Demand or ADoD. This is an app with commercial UAV opportunity listings available on a first-come first-served basis for certain AD Cloud account holders, including Flight to the Future subscribers. The ADoD service will post UAV job opportunities that can be accepted by authorized providers. The framework works closely with the C2 and C2 Pilot platforms to make the workflow a seamless process – from acceptance to job completion. ADoD will also feature customer reviews and UAS provider ratings.
+      
+      All these service platforms are part of AD’s Total Planetary Protection or TPP initiative. Although focused on UAVs at present, TPP is a larger “smart planet” initiative that endeavors to bring together cloud technologies, the Internet of Things, AI for machine automation and data analysis under the AD Cloud umbrella. The ultimate goal is to get machines of different capabilities to collaborate and solve increasingly complex problems.
+      
+      In step 2 of your journey, you’ll discover all the key technologies that are making this convergence possible. Once you have the concepts in hand, you’ll get introduced to UAV operations planning and discover the power of the C2 dashboard.
+      
+      This educational experience will familiarize you with core ideas like operations, missions, flights and, of course, aircraft – from the perspective of business practicality, scalability and FAA compliance. 
+      
+      The ecosystem described here, is unprecedented in nature and doesn’t exist at present. As Flight to the Future participants, you’ll be the first to experience the power of full life cycle cloud connectivity in drone operations. New capabilities are already being planned for future evolutions and services like ADoD are just the tip of the iceberg. 
+      
+      Are you ready to continue your journey into the aviation future? Let’s go!
+
+  utter_step2_2_2:
+  - text: |
+      What is cloud computing?
+    
+      Cloud computing is the prefered market solution for all computing needs within organizations. Cloud providers are able to supply a vast range of on-demand technological services to clients, allowing for absolute flexibility within IT operations.
+    
+      With a pay-as-you-go business model, cloud systems are extremely efficient and advantageous for organizations of any size, whereas traditional on-premise data centers present significant investment, cost and management requirements.
+    
+      Almost any IT need can be supplied by a cloud provider, such as software, storage, processing power, analytics, development, testing, applications and machine learning. 
+    
+      The wide adoption of IT solutions being provided over the internet is one of the most important technological revolutions of the past decade, freeing up corporate capital to be invested towards core business needs. No longer are there barriers prohibiting organizations from accessing state-of-the-art computing technology for their projects.
+    
+  
+#   utter_step2_2_2_2:
+#   - text: |
+#       Business operators have a diverse range of IT needs. Traditionally, these were met with on-site physical data storage and processing centers. However, there are many obstacles towards implementing efficient and cost-effective ‘on-premise’ solutions, such as team size, unpredictability of demand, resource limitations and the cost of keeping everything updated.
+      
+#       This is where cloud computing comes in, rapidly revolutionizing the implementation of commercial IT solutions. Now, computer services are delivered on-demand via the internet, on a pay-as-you-go basis. 
+      
+#       Rather than an organization buying, owning and maintaining their own physical servers and data centers, they can access services, such as computing power, storage and databases, from a cloud solutions provider.
+      
+#       With cloud computing, clients are able to instantly access software and hardware resources from the cloud in real time, and often only when they are needed. There is the flexibility to scale these resources up or down, allowing for easy adaptation as business needs evolve. 
+      
+#       Organizations of all types and sizes across sectors use cloud computing for a large variety of applications. Typical usage includes data storage and analytics, disaster recovery, virtual desktops, software development and testing, customer facing web applications, the Internet of Things and machine learning.
+
+#   utter_step2_2_2_3:
+#   - text: |
+#       With cloud computing, businesses can reduce costs, instantly scale and deploy quickly on a global level, empowering themselves to innovate faster and greatly increase their solution building capabilities. 
+      
+#       Both start-ups, who have no IT infrastructure of their own, and existing businesses, who may opt to transition away from their on-premises setup, experience many proven benefits from implementing cloud computing solutions within their operations.
+
+  utter_step2_2_3:
+  - text: |
+      The Internet of Things
+    
+      The Internet of Things or IoT, is on the forefront of the latest technological revolution, with the potential of impacting our daily lives and business operations in unimaginable ways. It is a network of electronic devices that share data with each other and with other systems on the Internet
+    
+      At the turn of the millennium, the advent of the Internet allowed for the connectivity of computers and data centers, and eventually people. Now with IoT, it is possible to interconnect essentially any object, opening the possibility to reimagine and redesign how we do things – with things. 
+    
+      The level of integration between machines and IoT platforms is expected to grow exponentially over the coming decades, creating a world in which data is continuously collected, transmitted, analyzed and acted upon by use of real-time, intelligent and automated systems.
+    
+      IoT is industry agnostic, so the applications are almost limitless with a multitude of business solutions already well established in the commercial market. 
+
+  utter_step2_2_4:
+  - text: |
+      A specialized hybrid cloud is a central component of the modern UAV ecosystem. Such a system requires three main elements:
+      
+      Low latency edge computing
+      
+      High bandwidth mobility
+      
+      Sophisticated dynamic IoT firmware
+
+      Low latency edge computing consists in optimizing the processing capabilities of a high volume of data messages, minimizing delays and improving efficiency.
+      High bandwidth mobility, on the other hand, refers to the cloud architecture being efficient in design, thus minimizing data bottlenecks and maximizing network throughput.
+
+    
+  utter_step2_2_5:
+  - text: |
+      The C2 or Command and Control service platform is AD´s framework for planning, deploying and managing commercial UAV operations. This cloud-driven platform is composed of the C2 operations dashboard and the C2 Pilot app. 
+    
+      From ensuring compliance with FAA authorizations to flight planning, C2 is the perfect tool for drone service providers that demand integration, transparency and user-friendly workflows for every step of the process.
+    
+      Within this module, we’ll take a closer look at the operational capabilities that C2 provides and understand the absolute advantages the platform offers for delivering professional-grade UAV services.
+
+  utter_step2_2_6:
+  - text: |
+      Asset management is a crucial part of running a commercial drone business, as different types of resources such as personnel, aircraft, batteries and payloads are utilized in daily operations.
+      
+      As drone fleets grow in size, the industry is adopting technology that is leading reliable cloud-based solutions that facilitate asset management efforts as part of operations management. 
+      
+      With this in mind, the C2 service platform is structured to provide drone operators with a comprehensive asset management tool with which to conduct the efficient administration of mission critical assets, by optimizing resource allocation and providing transparency, which results in dramatically better management.
+
+    
+  utter_step2:
+  - buttons:
+    - payload: /step2_2_1
+      title: '2.1'
+    - payload: /step2_2_2
+      title: '2.2'
+    - payload: /step2_2_3
+      title: '2.3'
+    - payload: /step2_2_4
+      title: '2.4'
+    - payload: /step2_2_5
+      title: '2.5'
+    - payload: /step2_2_6
+      title: '2.6'
+    text: Welcome to Step Two! Select a module to go over.
+
   utter_sorry:
   - image: spartacus-negative.gif
     text: Sorry to hear that.
@@ -588,6 +739,12 @@ responses:
 
         • A full year’s worth of insurance and a one-year subscription to our AD Cloud
 
+  utter_buy:
+  - text: |+
+       The Spartacus Hurricane an American commercial drone with cloud relay capability, is getting ready for take-off! 
+       This limited edition ready-to-assemble commercial drone kit is for anyone who wants to build a strong understanding of the Spartacus 
+       Hurricane hardware, aviation programming, electronics, and physics.
+       https://shop.aquilinedrones.com/product/spartacus-hurricane-drone-kit/
 
 
   utter_lesson_one:
@@ -682,17 +839,17 @@ responses:
 
       Look over the history, components, and the types of drones.
 
-  utter_quiz_response:
-  - buttons:
-    - payload: /answer_a
-      title: A
-    - payload: /answer_b
-      title: B
-    - payload: /answer_c
-      title: C
-    - payload: /answer_d
-      title: D
-    text: Select an answer.
+#   utter_quiz_response:
+#   - buttons:
+#     - payload: /answer_a
+#       title: A
+#     - payload: /answer_b
+#       title: B
+#     - payload: /answer_c
+#       title: C
+#     - payload: /answer_d
+#       title: D
+#     text: Select an answer.
   utter_modules:
   - buttons:
     - payload: /module_1_2_1
@@ -711,140 +868,123 @@ responses:
       title: 1.2.7
     - payload: /module_1_2_8
       title: 1.2.8
-    - payload: /module_1_2_9
-      title: 1.2.9
+
     text: Select a section to go over.
-  utter_module_1_2_1:
-  - text: |+
-      Welcome to the future of aviation. This is step 1 in the Flight to the Future program.
+#   utter_module_1_2_1:
+#   - text: |+
+#       Welcome to the future of aviation. This is step 1 in the Flight to the Future program.
 
-      At the completion of this step, you will become an FAA licensed commercial drone pilot.
+#       At the completion of this step, you will become an FAA licensed commercial drone pilot.
 
-      From understanding how drones are made to the rules of operating them in the National Airspace, you’ll learn about topics
-      that will help you pass the FAA Part 107 exam for drone pilots.
+#       From understanding how drones are made to the rules of operating them in the National Airspace, you’ll learn about topics
+#       that will help you pass the FAA Part 107 exam for drone pilots.
 
-  utter_module_1_2_2:
-  - text: |+
-      Drone systems
+#   utter_module_1_2_2:
+#   - text: |+
+#       Drone systems
 
-      What are drones? From multi-rotors to fixed-wing, drones come in many shapes and sizes. 
-      In this lesson you’ll learn how drones are made, what their vital components are, and the engineering that makes it all possible.
+#       What are drones? From multi-rotors to fixed-wing, drones come in many shapes and sizes. 
+#       In this lesson you’ll learn how drones are made, what their vital components are, and the engineering that makes it all possible.
 
-      With emphasis on multi-rotors, you’ll get a good understanding of the vital systems and technologies employed.
-      For additional perspective, delve into the history of drones and discover how this technological marvel evolved. 
+#       With emphasis on multi-rotors, you’ll get a good understanding of the vital systems and technologies employed.
+#       For additional perspective, delve into the history of drones and discover how this technological marvel evolved. 
 
-  utter_module_1_2_3:
-  - text: |+
-      Drones, UAVs and UAS
+#   utter_module_1_2_3:
+#   - text: |+
+#       Drones, UAVs and UAS
 
-      Drones in general describe machines that have some level of independence and can operate without human intervention or assistance
-      for periods of time. To get a deeper understanding of drones and drone systems, we have to start by defining them. 
+#       Drones in general describe machines that have some level of independence and can operate without human intervention or assistance
+#       for periods of time. To get a deeper understanding of drones and drone systems, we have to start by defining them. 
 
-      Although unmanned aerial vehicles or UAVs have become synonymous with the word drones, a large variety of machines can fall under this category.
+#       Although unmanned aerial vehicles or UAVs have become synonymous with the word drones, a large variety of machines can fall under this category.
 
-      As a future unmanned aerial services or UAS provider, you should have a good grasp of the concepts and technologies that converge in engineering
-      and operating drones.
+#       As a future unmanned aerial services or UAS provider, you should have a good grasp of the concepts and technologies that converge in engineering
+#       and operating drones.
 
-  utter_module_1_2_4:
-  - text: |+
-      Technologies transforming the industry
+#   utter_module_1_2_4:
+#   - text: |+
+#       Technologies transforming the industry
 
-      Then there is the autonomous capability – or at least some degree of automated operations that are a universal characteristic of all drones.
+#       Then there is the autonomous capability – or at least some degree of automated operations that are a universal characteristic of all drones.
 
-      From the perspective of a commercial drone operator, the industry is changing rapidly. Many of the core technologies are rapidly
-      evolving – enabling new, innovative solutions and business models.
+#       From the perspective of a commercial drone operator, the industry is changing rapidly. Many of the core technologies are rapidly
+#       evolving – enabling new, innovative solutions and business models.
 
-      This lesson will introduce you to some of those technologies, notably cloud computing and artificial intelligence.
-      With the advent of wireless connectivity, these technologies are transforming how unmanned aerial missions are planned and executed.
+#       This lesson will introduce you to some of those technologies, notably cloud computing and artificial intelligence.
+#       With the advent of wireless connectivity, these technologies are transforming how unmanned aerial missions are planned and executed.
 
-      You’ll learn the difference between active and passive drone missions and how sensors and payloads define capabilities. 
-      And despite the versatile nature of these capabilities, specialized industry solutions have emerged and are rapidly evolving. 
+#       You’ll learn the difference between active and passive drone missions and how sensors and payloads define capabilities. 
+#       And despite the versatile nature of these capabilities, specialized industry solutions have emerged and are rapidly evolving. 
 
-      As a future UAS provider, you need to be keenly aware of the trends and future directions.
+#       As a future UAS provider, you need to be keenly aware of the trends and future directions.
 
-  utter_module_1_2_5:
-  - text: |+
-      Cloud connected VTOL drone with specialized sensors, LTE communications and AI based video analysis
-      Regulations and policies
+#   utter_module_1_2_5:
+#   - text: |+
+#       Cloud connected VTOL drone with specialized sensors, LTE communications and AI based video analysis
+#       Regulations and policies
 
-      Rapid expansion of this industry requires a deep integration of UAV services into the National Airspace System or NAS. 
-      The Federal Aviation Administration, or FAA, was initially slow in taking steps to do this.
+#       Rapid expansion of this industry requires a deep integration of UAV services into the National Airspace System or NAS. 
+#       The Federal Aviation Administration, or FAA, was initially slow in taking steps to do this.
 
-      However, since 2016 they have ramped up their efforts to provide regulatory oversight on UAV operations.
-      You’ll get a good introduction to the current picture, preparing you for a deeper dive in subsequent lessons.
+#       However, since 2016 they have ramped up their efforts to provide regulatory oversight on UAV operations.
+#       You’ll get a good introduction to the current picture, preparing you for a deeper dive in subsequent lessons.
 
-  utter_module_1_2_6:
-  - text: |+
-      Drone systems
+#   utter_module_1_2_6:
+#   - text: |+
+#       Drone systems
 
-      A drone system will consist of an Air Segment and Ground Segment. The Air Segment includes everything that flies to perform a mission.
-      Namely the UAV and a payload. 
+#       A drone system will consist of an Air Segment and Ground Segment. The Air Segment includes everything that flies to perform a mission.
+#       Namely the UAV and a payload. 
 
-      The Ground Segment includes the technology that is fixed to the ground and manages the UAV from mission planning
-      to completion including post mission reporting. Drone engineering is focused on the air segment of the system.
+#       The Ground Segment includes the technology that is fixed to the ground and manages the UAV from mission planning
+#       to completion including post mission reporting. Drone engineering is focused on the air segment of the system.
 
 
-  utter_module_1_2_7:
-  - text: |+
-      Drone engineering and electronics
+#   utter_module_1_2_7:
+#   - text: |+
+#       Drone engineering and electronics
 
-      Next, we’ll turn attention to the vehicle itself – the unmanned aerial vehicle.
+#       Next, we’ll turn attention to the vehicle itself – the unmanned aerial vehicle.
 
-      There are two basic configurations: fixed wing and VTOL (vertical takeoff and landing).
-      The focus in our curriculum, will be on VTOL versions.
+#       There are two basic configurations: fixed wing and VTOL (vertical takeoff and landing).
+#       The focus in our curriculum, will be on VTOL versions.
 
-      Additionally, as you’ll see later, current regulations usually don’t permit BVLOS (beyond visual line of sight) operations.
+#       Additionally, as you’ll see later, current regulations usually don’t permit BVLOS (beyond visual line of sight) operations.
 
-      So the main choice of propulsion becomes battery power, which is increasingly suitable for short flights.
-      Information on gas powered engines and hybrid configurations can be found in the lesson bibliography.
+#       So the main choice of propulsion becomes battery power, which is increasingly suitable for short flights.
+#       Information on gas powered engines and hybrid configurations can be found in the lesson bibliography.
 
-      The key electronic components in a VTOL are a transceiver, a flight controller and a regulator-distributor.
-      Integrated with these, are the drone motors and the battery of course. 
+#       The key electronic components in a VTOL are a transceiver, a flight controller and a regulator-distributor.
+#       Integrated with these, are the drone motors and the battery of course. 
 
-      As you’ll discover later, mission specifics can influence the exact nature of the technical capabilities. 
+#       As you’ll discover later, mission specifics can influence the exact nature of the technical capabilities. 
 
-      For example, a GPS card is an option that can be added for enhanced flight control if the selected flight controller can leverage
-      GPS for autonomous navigation.
+#       For example, a GPS card is an option that can be added for enhanced flight control if the selected flight controller can leverage
+#       GPS for autonomous navigation.
 
-      A transceiver receives and sends control data as well as payload data between the UAV and the ground segment.
+#       A transceiver receives and sends control data as well as payload data between the UAV and the ground segment.
 
-      So, if the UAV is only flown by a direct radio frequency (RF) hand controller, then it only needs an RF transceiver. 
+#       So, if the UAV is only flown by a direct radio frequency (RF) hand controller, then it only needs an RF transceiver. 
 
-      An LTE (Long-Term Evolution) or satellite transceiver is needed if the UAV is used for longer distance missions.
+#       An LTE (Long-Term Evolution) or satellite transceiver is needed if the UAV is used for longer distance missions.
 
-      Take a deeper dive on these topics in the concept section of this lesson.
+#       Take a deeper dive on these topics in the concept section of this lesson.
 
-  utter_module_1_2_8:
-  - text: |+
-      Sensors and payloads
+#   utter_module_1_2_8:
+#   - text: |+
+#       Sensors and payloads
 
-      Sensors vary based on mission requirements and vehicle capability. Full spectrum observational sensors are available.
+#       Sensors vary based on mission requirements and vehicle capability. Full spectrum observational sensors are available.
 
-      Additionally, specialized equipment such as LIDAR (using lasers) is increasingly in use. Fire and radiation detection sensors 
-      are amongst some of the most advanced capabilities being developed for commercial use.
+#       Additionally, specialized equipment such as LIDAR (using lasers) is increasingly in use. Fire and radiation detection sensors 
+#       are amongst some of the most advanced capabilities being developed for commercial use.
 
-      Payloads are the next evolution in commercial drone operations. 
-      Due to power constraints, UAVs are often built around specific payloads. 
+#       Payloads are the next evolution in commercial drone operations. 
+#       Due to power constraints, UAVs are often built around specific payloads. 
 
-      For example, medical delivery requirements may require a refrigerated payload to be maintained during transport. 
-      Nevertheless, more generalized capabilities are being devised to enable drones to perform multiple types of missions.
+#       For example, medical delivery requirements may require a refrigerated payload to be maintained during transport. 
+#       Nevertheless, more generalized capabilities are being devised to enable drones to perform multiple types of missions.
 
-  utter_module_1_2_9:
-  - text: |+
-      The British Queen Bee, a radio-controlled target drone from the 1930s
-
-      Finally, a bit of history
-
-      Drones, specifically the aerial variety, have been evolving for over a century now. Their origins are in warfare and military applications.
-
-      To understand how the age of commercial drones appeared in the past couple of decades, its essential to understand the milestones that preceded.
-
-      We’ll look at how drones first made their appearance as aerial bombs, then moved on to become radio-controlled targets 
-      for anti-aircraft defense training.
-      They eventually became jet powered and could be used for high altitude reconnaissance missions. 
-
-      Finally, in the last decade of the Twentieth Century, their use in military expanded rapidly, laying the groundwork for commercial versions 
-      to make their way into the market.
 
   utter_weather_effect:
   - text: Weather prediction is now an essential component of all societal activities. It is of even greater significance in aviation, where it can greatly influence performance and safety. For more information, review Step 1 of the program.
@@ -966,6 +1106,20 @@ responses:
       Welcome to Flight to the Future. Please input the following information when prompted:
   utter_quiz_retrieval:
   - text: Which quiz score would you like to view?
+
+  utterModule1:
+  - text: You can access Module 1 to get more information about this topic.
+
+  utterModule2: 
+  - text: You can access Module 2 to get more information about this topic.
+
+  utterModule3:
+  - text: You can access Module 3 to get more information about this topic.
+
+  utterModule4:
+  - text: You can access Module 4 to get more information about this topic.
+
+  
 actions:
 - action_ask_weather
 - action_receive_name

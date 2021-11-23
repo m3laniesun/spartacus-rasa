@@ -940,64 +940,103 @@ nlu:
     - step 1.12
     - Step 1.12
 
+
+# STEP TWO Modules
+
+- intent: step_two
+  examples: |
+    - show me step two 
+    - let's do step two
+    - step two
+
+- intent: step2_2_1
+  examples: |
+    - step 2.1
+    - Step 2.1
+
+- intent: step2_2_2
+  examples: |
+    - step 2.2
+    - Step 2.2
+
+- intent: step2_2_3
+  examples: |
+    - step 2.3
+    - Step 2.3
+
+- intent: step2_2_4
+  examples: |
+    - step 2.4
+    - Step 2.4
+
+- intent: step2_2_5
+  examples: |
+    - step 2.5
+    - Step 2.5
+
+- intent: step2_2_6
+  examples: |
+    - step 2.6
+    - Step 2.6
+
 # 1.2 MODULES
 
-- intent: module_1_2_1
-  examples: |
-    - module 1.2.1
-    - Module 1.2.1
-- intent: module_1_2_2
-  examples: |
-    - module 1.2.2
-    - Module 1.2.2
-- intent: module_1_2_3
-  examples: |
-    - module 1.2.3
-    - Module 1.2.3
-- intent: module_1_2_4
-  examples: |
-    - module 1.2.4
-    - Module 1.2.4
-- intent: module_1_2_5
-  examples: |
-    - module 1.2.5
-    - Module 1.2.5
-- intent: module_1_2_6
-  examples: |
-    - module 1.2.6
-    - Module 1.2.6
-- intent: module_1_2_7
-  examples: |
-    - module 1.2.7
-    - Module 1.2.7
-- intent: module_1_2_8
-  examples: |
-    - module 1.2.8
-    - Module 1.2.8
-- intent: module_1_2_9
-  examples: |
-    - module 1.2.9
-    - Module 1.2.9
+# - intent: module_1_2_1
+#   examples: |
+#     - module 1.2.1
+#     - Module 1.2.1
+# - intent: module_1_2_2
+#   examples: |
+#     - module 1.2.2
+#     - Module 1.2.2
+# - intent: module_1_2_3
+#   examples: |
+#     - module 1.2.3
+#     - Module 1.2.3
+# - intent: module_1_2_4
+#   examples: |
+#     - module 1.2.4
+#     - Module 1.2.4
+# - intent: module_1_2_5
+#   examples: |
+#     - module 1.2.5
+#     - Module 1.2.5
+# - intent: module_1_2_6
+#   examples: |
+#     - module 1.2.6
+#     - Module 1.2.6
+# - intent: module_1_2_7
+#   examples: |
+#     - module 1.2.7
+#     - Module 1.2.7
+# - intent: module_1_2_8
+#   examples: |
+#     - module 1.2.8
+#     - Module 1.2.8
+# - intent: module_1_2_9
+#   examples: |
+#     - module 1.2.9
+#     - Module 1.2.9
 
-- intent: answer_a
-  examples: |
-    - A
-    - a
+# - intent: answer_a
+#   examples: |
+#     - A
+#     - a
 
-- intent: answer_b
-  examples: |
-    - B
-    - b
+# - intent: answer_b
+#   examples: |
+#     - B
+#     - b
 
-- intent: answer_c
-  examples: |
-    - C
-    - c
+# - intent: answer_c
+#   examples: |
+#     - C
+#     - c
 
-- intent: answer_d
-  examples: |
-    - D
-    - d
+# - intent: answer_d
+#   examples: |
+#     - D
+#     - d
 
 - intent: FirstName
   examples: |
@@ -1055,4 +1094,40 @@ nlu:
     - performance
     - aviation weather 
 
-  
+- intent: buy_drone
+  examples: |
+    - buy a drone
+    - where can i buy a drone 
+    - aquiline drone store
+    - drone store
+    - i wanna buy a drone
+    - i want to buy a drone
+
+
+- intent: directToModule1
+  examples: |
+    - drones
+    - uav
+    - uas
+    - government policy
+    - unmanned aerial system
+    - air segment
+    - fixed wing
+    - vtol
+    - structure
+    - transceiver
+    - hot-air balloons
+    - powered airships
+    - hybrid aircraft
+    - FAA
+    - FAR
+
+- intent: directToModule2
+  examples: |
+    - internet of things
+    - iot
+
+- intent: directToModule4
+  examples: |
+    - marketing
+    - Marketing

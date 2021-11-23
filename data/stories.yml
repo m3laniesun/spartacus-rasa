@@ -11,11 +11,11 @@ stories:
     - intent: repeat_name
     - action: action_say_name
 
-
 - story: home 
   steps:
   - intent: greet
-  - action: utter_home
+  - action: utter_greet
+  - action: utter_welcome_buttons
 
 - story: happy path
   steps:
@@ -177,61 +177,53 @@ stories:
     - intent: find_jobs
     - action: utter_find_jobs
 
-- story: module 1.2.1
-  steps:
-    - intent: module_1_2_1
-    - action: utter_module_1_2_1
-    - action: utter_modules
+# - story: module 1.2.1
+#   steps:
+#     - intent: module_1_2_1
+#     - action: utter_module_1_2_1
+#     - action: utter_modules
 
-- story: module 1.2.2
-  steps:
-    - intent: module_1_2_2
-    - action: utter_module_1_2_2
-    - action: utter_modules
+# - story: module 1.2.2
+#   steps:
+#     - intent: module_1_2_2
+#     - action: utter_module_1_2_2
+#     - action: utter_modules
 
-- story: module 1.2.3
-  steps:
-    - intent: module_1_2_3
-    - action: utter_module_1_2_3
-    - action: utter_modules
+# - story: module 1.2.3
+#   steps:
+#     - intent: module_1_2_3
+#     - action: utter_module_1_2_3
+#     - action: utter_modules
 
-- story: module 1.2.4
-  steps:
-    - intent: module_1_2_4
-    - action: utter_module_1_2_4
-    - action: utter_modules
+# - story: module 1.2.4
+#   steps:
+#     - intent: module_1_2_4
+#     - action: utter_module_1_2_4
+#     - action: utter_modules
 
-- story: module 1.2.5
-  steps:
-    - intent: module_1_2_5
-    - action: utter_module_1_2_5
-    - action: utter_modules
+# - story: module 1.2.5
+#   steps:
+#     - intent: module_1_2_5
+#     - action: utter_module_1_2_5
+#     - action: utter_modules
 
-- story: module 1.2.6
-  steps:
-    - intent: module_1_2_6
-    - action: utter_module_1_2_6
-    - action: utter_modules
+# - story: module 1.2.6
+#   steps:
+#     - intent: module_1_2_6
+#     - action: utter_module_1_2_6
+#     - action: utter_modules
 
-- story: module 1.2.7
-  steps:
-    - intent: module_1_2_7
-    - action: utter_module_1_2_7
-    - action: utter_modules
+# - story: module 1.2.7
+#   steps:
+#     - intent: module_1_2_7
+#     - action: utter_module_1_2_7
+#     - action: utter_modules
 
-- story: module 1.2.8
-  steps:
-    - intent: module_1_2_8
-    - action: utter_module_1_2_8
-    - action: utter_modules
-
-- story: module 1.2.9
-  steps:
-    - intent: module_1_2_9
-    - action: utter_module_1_2_9
-    - action: utter_modules
-
-
+# - story: module 1.2.8
+#   steps:
+#     - intent: module_1_2_8
+#     - action: utter_module_1_2_8
+#     - action: utter_modules
 
 - story: step one 
   steps:
@@ -298,19 +290,52 @@ stories:
     - intent: step1_1_12
     - action: utter_step1_1_12
 
-
-
-- story: quiz feedback
+- story: step two 
   steps:
-    - intent: take_quiz
-    - action: utter_quiz_start
-    - action: utter_quiz_correct
-    - action: utter_quiz_wrong
-    - action: utter_quiz_correct
-    - action: utter_quiz_wrong
-    - action: utter_quiz_wrong
-    - action: utter_quiz_final_correct
-    - action: utter_results
+    - intent: step_two
+    - action: utter_step2
+    
+- story: step 2.1
+  steps:
+    - intent: step2_2_1
+    - action: utter_step2_2_1
+
+- story: step 2.2
+  steps:
+    - intent: step2_2_2
+    - action: utter_step2_2_2
+
+- story: step 2.3
+  steps:
+    - intent: step2_2_3
+    - action: utter_step2_2_3
+
+- story: step 2.4
+  steps:
+    - intent: step2_2_4
+    - action: utter_step2_2_4
+
+- story: step 2.5
+  steps:
+    - intent: step2_2_5
+    - action: utter_step2_2_5
+
+- story: step 2.6
+  steps:
+    - intent: step2_2_6
+    - action: utter_step2_2_6
+
+# - story: quiz feedback
+#   steps:
+#     - intent: take_quiz
+#     - action: utter_quiz_start
+#     - action: utter_quiz_correct
+#     - action: utter_quiz_wrong
+#     - action: utter_quiz_correct
+#     - action: utter_quiz_wrong
+#     - action: utter_quiz_wrong
+#     - action: utter_quiz_final_correct
+#     - action: utter_results
 
 # - story: request user info
 #   steps:
@@ -343,3 +368,19 @@ stories:
     - action: utter_quiz_retrieval
     - intent: quiz_topic
     - action: utter_results
+
+- story: buy a drone
+  steps: 
+    - intent: buy_drone
+    - action: utter_buy
+
+- story: directs user to modules when they ask about a key term
+  steps:
+    - intent: directToModule1
+    - action: utterModule1
+    - intent : directToModule2
+    - action: utterModule2
+    - intent: directToModule3
+    - action: utterModule3
+    - intent : directToModule4
+    - action: utterModule4
