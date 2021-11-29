@@ -22,6 +22,11 @@ nlu:
     - prescott
     - my name is [melanie](slot)
     - i'm [melanie](slot)
+- intent: about
+  examples: |
+    - home
+    - intro
+    - start
 - intent: aboutad
   examples: |
     - i want to know more about aquiline drones
@@ -878,7 +883,9 @@ nlu:
     - show me step one
     - let's start step one
     - step one
+    - Step one
     - step 1
+    - Step 1
 
 - intent: step1_1_1
   examples: |
@@ -948,6 +955,8 @@ nlu:
     - show me step two 
     - let's do step two
     - step two
+    - Step 2
+    - step 2
 
 - intent: step2_2_1
   examples: |

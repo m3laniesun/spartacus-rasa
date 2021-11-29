@@ -27,7 +27,12 @@ stories:
   - intent: thank
   - action: utter_welcome
   
-- story: intro
+- story: intro home
+  steps:
+  - intent: about
+  - action: utter_home
+
+- story: aquiline drones
   steps:
     - intent: aboutad
     - action: utter_aboutad

@@ -168,6 +168,7 @@ intents:
 - step2_2_6:
     use_entities: true
 - buy_drone
+- about
 
 entities:
 - name
@@ -220,8 +221,8 @@ responses:
     text: Hello. How can I help you today?
   utter_welcome_buttons:
   - buttons:
-    - payload: /utter_home
-      title: Intro
+    - payload: /about
+      title: About Aquiline Drones
     - payload: /fttf_intro
       title: Flight to the Future
     - payload: /step_one
@@ -276,21 +277,6 @@ responses:
       Step 4 is about your drone business, where we go into details about how to set up, structure, operate and market your UAV business in a professional and efficient manner, with risk management and FAA compliance.
 
       By completing the four steps in Flight to the Future, you will become a well-rounded and highly capable UAV service provider, possessing all the necessary know-how to launch commercial operations and generate multiple revenue streams.
-  utter_step1_intro:
-  - text: |-
-      Welcome to Step 1 of Flight to the Future.
-
-      This is training and certification, which is divided into 12 modules containing a total of 68 segments. Serial progression through the modules is required in this step of the program. At the end of this step, you will be ready to take and pass the FAA Part 107 exam for commercial drone pilots.
-
-      In the first half, you’ll take a deep dive into the nature of UAV systems, covering different aspects of how they operate and understanding the laws of physics behind drone flight as well as the forces and conditions that allow the aircraft to stay airborne. 
-
-      From atmospheric conditions to weight and balance restrictions, you’ll learn about key aspects that influence the safe operation of drone flights, such as payloads and aeronautical decision making, preparing you for responsible mission planning and execution.  
-
-      The second half deals with the FAA’s role in aviation, understanding how airspace is categorized into different classes within the National Airspace System, and the implications and restrictions imposed on flight due to various regulations and advisories. 
-
-      The modules provide a comprehensive treatment of all the FAA study topics for the Part 107 exam, which is a vital steppingstone for becoming a proficient drone business operator. 
-
-      At the end of this step, you will take a full practice test, after which you will be ready to sit for the actual exam and obtain your FAA Part 107 license for commercial drone operations. 
   utter_step1_1_1:
   - text: |-
       Prepare for takeoff!
@@ -497,8 +483,6 @@ responses:
   
   utter_step1:
   - buttons:
-    - payload: /step1_intro
-      title: Intro
     - payload: /step1_1_1
       title: '1.1'
     - payload: /step1_1_2
@@ -744,7 +728,7 @@ responses:
        The Spartacus Hurricane an American commercial drone with cloud relay capability, is getting ready for take-off! 
        This limited edition ready-to-assemble commercial drone kit is for anyone who wants to build a strong understanding of the Spartacus 
        Hurricane hardware, aviation programming, electronics, and physics.
-       https://shop.aquilinedrones.com/product/spartacus-hurricane-drone-kit/
+       [Spartacus Hurricane Drone Kit](https://shop.aquilinedrones.com/product/spartacus-hurricane-drone-kit/)
 
 
   utter_lesson_one:
@@ -1100,7 +1084,7 @@ responses:
   utter_login:
   - text: 'Enter your e-mail address:'
   utter_login_success:
-  - text: Login successful. Welcome John!
+  - text: Login successful. Welcome!
   utter_create_acc:
   - text: |
       Welcome to Flight to the Future. Please input the following information when prompted:
